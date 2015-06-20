@@ -2,7 +2,7 @@ require.config({
 	baseUrl: "/js/",
 	paths: {
 		"jquery": "lib/jquery.min",
-		"underscore": "lib/underscore",
+		"underscore": "lib/underscore.min",
 		"backbone": "lib/backbone.min"
 	},
 	shim: {

@@ -1,7 +1,24 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 
-		pkg: grunt.file.readJSON('package'),
+		sass: {
+			dev: {
+				options: {
+					outputStyle: 'expanded',
+					sourceMap: true
+				},
+				files: {
+					'css/main.css': 'css/main.scss'
+				}
+			}
+		},
+
+		watch: {
+			sass: {
+				files: ['css/*.scss', 'css/partials/*.scss'],
+				tasks: ['sass:dev']
+			}
+		},
 
 		shell: {
 			server: {
@@ -14,6 +31,8 @@ module.exports = function(grunt) {
 
 	});
 
+	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-shell-spawn');
-	grunt.registerTask('default', ['shell:server']);
+	grunt.registerTask('default', ['shell:server', 'watch']);
 };
