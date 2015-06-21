@@ -1,0 +1,46 @@
+#content {
+	display: flex;
+	flex-direction: column;
+	> div {
+		flex: 1;
+	}
+	> div.final {
+		img {
+			width: 100%;
+		}
+	}
+	> div.code {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		> div, iframe {
+			flex: 1;
+			height: 250px;
+			&.css {
+				margin-top: -250px;
+			}
+		}
+		@media (min-width: $mobile) {
+			flex-direction: row;
+			> div, iframe {
+				width: 50%;
+				height: 500px;
+				&.css {
+					margin-top: 0;
+					margin-left: -50%;
+				}
+			}
+		}
+	}
+}
+
+.code {
+	.html, .css {
+		visibility: hidden;
+	}
+	.html, .css {
+		&.active {
+			visibility: visible;
+		}
+	}
+}
