@@ -4,8 +4,7 @@ module.exports = function(grunt) {
 		sass: {
 			dev: {
 				options: {
-					outputStyle: 'expanded',
-					sourceMap: true
+					outputStyle: 'expanded'
 				},
 				files: {
 					'css/style.css': 'css/style.scss'
@@ -15,7 +14,7 @@ module.exports = function(grunt) {
 
 		watch: {
 			sass: {
-				files: ['css/*.scss', 'css/partials/*.scss'],
+				files: ['css/*.scss', 'css/partials/*.scss', 'css/vendor/*.scss'],
 				tasks: ['sass:dev']
 			}
 		},

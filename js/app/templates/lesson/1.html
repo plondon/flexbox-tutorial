@@ -1,9 +1,11 @@
+<h1>Lesson #1: display: flex</h1>
+
 <div class="intro">
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque risus tellus, sit amet bibendum lorem dictum non. Sed at erat malesuada, aliquam leo a, posuere elit. Mauris congue ipsum nec libero varius, a tempor tortor semper. Proin elementum mollis luctus. Cras porta faucibus rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin sollicitudin metus dolor, id dapibus odio placerat a. Sed tellus velit, lacinia at lobortis at, volutpat at ligula. Praesent in nisl varius, elementum lectus nec, iaculis diam. Aliquam erat volutpat. Cras euismod odio ac fringilla ultrices. Sed vel ultrices dui, eu hendrerit sapien. Praesent vehicula lobortis neque et cursus. Cras posuere dolor at nunc consectetur vestibulum.
 </div>
 
 <div class="final">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=88&txt=1200%C3%97350&w=1200&h=350" alt="">
+	<img src="/assets/images/lesson1.png" alt="">
 </div>
 
 <div class="toggle">
@@ -16,29 +18,41 @@
 	<div class="html">
 		<textarea id="html-code" name="code">
 <style>
-
+.parent {
+  display: block;
+}
+.child {
+  display: block;
+  margin-bottom: 10px;
+	line-height: 100px;
+}
 </style>
 <!doctype html>
 <html>
+	<head>
+	<link rel="stylesheet" href="../css/style.css">
+	</head>
   <body>
   	<div class="parent">
-    	<div class="child"></div>
-    	<div class="child"></div>
-    	<div class="child"></div>
-    	<div class="child"></div>
+    	<div class="child blue">1</div>
+    	<div class="child orange">2</div>
+    	<div class="child red">3</div>
+    	<div class="child green">4</div>
   	</div>
   </body>
 </html>
 		</textarea>
 	</div>
 
-	<div class="css active">
+	<div class="css">
 		<textarea id="css-code" name="code">
 .parent {
-	display: flex;
+  display: block;
 }
 .child {
-	flex: 1;
+  display: block;
+  margin-bottom: 10px;
+	line-height: 100px;
 }</textarea>
 	</div>
 
