@@ -1,12 +1,27 @@
 <h1>Lesson #1: display: flex</h1>
 
 <div class="intro">
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque risus tellus, sit amet bibendum lorem dictum non. Sed at erat malesuada, aliquam leo a, posuere elit. Mauris congue ipsum nec libero varius, a tempor tortor semper. Proin elementum mollis luctus. Cras porta faucibus rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin sollicitudin metus dolor, id dapibus odio placerat a. Sed tellus velit, lacinia at lobortis at, volutpat at ligula. Praesent in nisl varius, elementum lectus nec, iaculis diam. Aliquam erat volutpat. Cras euismod odio ac fringilla ultrices. Sed vel ultrices dui, eu hendrerit sapien. Praesent vehicula lobortis neque et cursus. Cras posuere dolor at nunc consectetur vestibulum.
+	<p>
+		Let's start with the display property. <b>display: flex</b> defines a flex container, giving the <em>direct children ( > )</em> a flex context. It's important to think of <b>display: flex</b> as definining a module as opposed to setting a single property. Here's what Mozilla has to say about it:
+	</p>
+	<blockquote>The CSS3 Flexible Box, or flexbox, is a layout mode providing for the arrangement of elements on a page such that the elements behave predictably when the page layout must accommodate different screen sizes and different display devices. For many applications, the flexible box model provides an improvement over the block model in that it does not use floats, nor do the flex container's margins collapse with the margins of its contents. </blockquote>
+	<cite><a target="_blank" href="href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes"">MDN</a></cite>
+	<p>
+		Basically:
+		<ul>
+			<li>should make responsive easier</li>
+			<li>goodbye floats</li>
+			<li>margins behave differently (?)</li>
+		</ul>
+	</p>
+	<p class="task">
+		Change the .parent display property to <b>flex</b>
+	</p>
 </div>
 
-<div class="final">
+<!-- <div class="final">
 	<img src="/assets/images/lesson1.png" alt="">
-</div>
+</div> -->
 
 <div class="toggle">
 	<button id="html-toggle">HTML</button>
@@ -24,7 +39,6 @@
 .child {
   display: block;
   margin-bottom: 10px;
-	line-height: 100px;
 }
 </style>
 <!doctype html>
@@ -52,7 +66,6 @@
 .child {
   display: block;
   margin-bottom: 10px;
-	line-height: 100px;
 }</textarea>
 	</div>
 

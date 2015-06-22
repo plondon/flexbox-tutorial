@@ -40,10 +40,10 @@
 			flex-direction: row;
 			> div, iframe {
 				height: 500px;
-				margin: 0px 10px;
+				margin: 0px 5px;
 				&.css {
 					margin-top: 0;
-					margin-left: -50%;
+					margin-left: calc(-50% + 5px);
 				}
 			}
 		}

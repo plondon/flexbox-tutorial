@@ -11,6 +11,14 @@ body {
 	font-weight: 300;
 }
 
+img {
+	max-width: 100%;
+}
+
+blockquote {
+	font-family: $serif;
+}
+
 .child {
 	color: white;
 	height: 100px;

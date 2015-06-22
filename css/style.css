@@ -695,6 +695,14 @@ body {
   font-weight: 300;
 }
 
+img {
+  max-width: 100%;
+}
+
+blockquote {
+  font-family: "Lora";
+}
+
 .child {
   color: white;
   height: 100px;
@@ -775,11 +783,11 @@ body {
   }
   #content > div.code > div, #content > div.code iframe {
     height: 500px;
-    margin: 0px 10px;
+    margin: 0px 5px;
   }
   #content > div.code > div.css, #content > div.code iframe.css {
     margin-top: 0;
-    margin-left: -50%;
+    margin-left: calc(-50% + 5px);
   }
 }
 
