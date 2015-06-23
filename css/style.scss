@@ -1,4 +1,5 @@
 /* Vendor */
+@import "bourbon/bourbon";
 @import "vendor/codemirror";
 
 /* Variables */
@@ -7,3 +8,4 @@
 /* Global & Pages */
 @import "partials/global";
 @import "partials/lesson";
+@import "partials/home";

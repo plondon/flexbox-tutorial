@@ -695,6 +695,11 @@ body {
   font-weight: 300;
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 img {
   max-width: 100%;
 }
@@ -797,4 +802,37 @@ blockquote {
 
 .code .html.active, .code .css.active {
   visibility: visible;
+}
+
+.wrapper.home {
+  display: flex;
+  margin-top: 200px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper.home > * {
+  -webkit-transition: top 0.2s, opacity 0.2s;
+  -moz-transition: top 0.2s, opacity 0.2s;
+  transition: top 0.2s, opacity 0.2s;
+  position: relative;
+  opacity: 0;
+  top: -20px;
+}
+
+#content.active .muscles, #content.active h1, #content.active a {
+  top: 0px;
+  opacity: 1;
+}
+
+#content.active h1 {
+  -webkit-transition: top 0.2s 0.2s, opacity 0.2s 0.2s;
+  -moz-transition: top 0.2s 0.2s, opacity 0.2s 0.2s;
+  transition: top 0.2s 0.2s, opacity 0.2s 0.2s;
+}
+
+#content.active a {
+  -webkit-transition: top 0.2s 0.4s, opacity 0.2s 0.4s;
+  -moz-transition: top 0.2s 0.4s, opacity 0.2s 0.4s;
+  transition: top 0.2s 0.4s, opacity 0.2s 0.4s;
 }

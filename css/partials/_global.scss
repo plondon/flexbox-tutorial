@@ -11,6 +11,11 @@ body {
 	font-weight: 300;
 }
 
+.wrapper {
+	max-width: $wrapper;
+	margin: 0 auto;
+}
+
 img {
 	max-width: 100%;
 }

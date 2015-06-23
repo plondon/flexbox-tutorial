@@ -16,12 +16,12 @@ var LessonView = Backbone.View.extend({
 		require(['text!templates/lesson/' + this.lesson + '.html'
 			      ], function (lessonTemplate) {
 
-			self.$template = $(lessonTemplate);
-			self.render();
+			var $template = $(lessonTemplate);
+			window.appView.render($template);
+			self.initPreview();
 		});
 	},
 	render: function() {
-		this.$content.html(this.$template);
 		this.initPreview();
 	},
 	initPreview: function() {
