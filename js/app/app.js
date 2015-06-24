@@ -19,17 +19,14 @@ var AppRouter = Backbone.Router.extend({
 	},
 	home: function() {
 		window.appView.changePage();
-
 		var $template = $(HomeTemplate);
+
 		window.appView.render($template);
 	},
 	render: function(number) {
 		window.appView.changePage();
 		if ( this.lv ) { this.lv.destroy(); }
 		this.lv = new LessonView({ el: $('#content'), lesson: number });
-
-		_.delay(function() {
-		}, 100);
 	},
 });
 

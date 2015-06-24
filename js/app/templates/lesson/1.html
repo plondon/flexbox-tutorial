@@ -1,75 +1,77 @@
-<h1>Lesson #1: display: flex</h1>
+<div class="wrapper lesson">
+	<h1>Lesson #1: display: flex</h1>
 
-<div class="intro">
-	<p>
-		Let's start with the display property. <b>display: flex</b> defines a flex container, giving the <em>direct children ( > )</em> a flex context. It's important to think of <b>display: flex</b> as definining a module as opposed to setting a single property. Here's what Mozilla has to say about it:
-	</p>
-	<blockquote>The CSS3 Flexible Box, or flexbox, is a layout mode providing for the arrangement of elements on a page such that the elements behave predictably when the page layout must accommodate different screen sizes and different display devices. For many applications, the flexible box model provides an improvement over the block model in that it does not use floats, nor do the flex container's margins collapse with the margins of its contents. </blockquote>
-	<cite><a target="_blank" href="href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes"">MDN</a></cite>
-	<p>
-		Basically:
-		<ul>
-			<li>should make responsive easier</li>
-			<li>goodbye floats</li>
-			<li>margins behave differently (?)</li>
-		</ul>
-	</p>
-	<p class="task">
-		Change the .parent display property to <b>flex</b>
-	</p>
-</div>
-
-<!-- <div class="final">
-	<img src="/assets/images/lesson1.png" alt="">
-</div> -->
-
-<div class="toggle">
-	<button id="html-toggle">HTML</button>
-	<button id="css-toggle">CSS</button>
-</div>
-
-<div class="code">
-
-	<div class="html">
-		<textarea id="html-code" name="code">
-<style>
-.parent {
-  display: block;
-}
-.child {
-  display: block;
-  margin-bottom: 10px;
-}
-</style>
-<!doctype html>
-<html>
-	<head>
-	<link rel="stylesheet" href="../css/style.css">
-	</head>
-  <body>
-  	<div class="parent">
-    	<div class="child blue">1</div>
-    	<div class="child orange">2</div>
-    	<div class="child red">3</div>
-    	<div class="child green">4</div>
-  	</div>
-  </body>
-</html>
-		</textarea>
+	<div class="intro">
+		<p>
+			Let's start with the display property. <b>display: flex</b> defines a flex container, giving the <em>direct children ( > )</em> a flex context. It's important to think of <b>display: flex</b> as definining a module as opposed to setting a single property. Here's what Mozilla has to say about it:
+		</p>
+		<blockquote>The CSS3 Flexible Box, or flexbox, is a layout mode providing for the arrangement of elements on a page such that the elements behave predictably when the page layout must accommodate different screen sizes and different display devices. For many applications, the flexible box model provides an improvement over the block model in that it does not use floats, nor do the flex container's margins collapse with the margins of its contents. </blockquote>
+		<cite><a target="_blank" href="href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes"">MDN</a></cite>
+		<p>
+			Basically:
+			<ul>
+				<li>should make responsive easier</li>
+				<li>goodbye floats</li>
+				<li>margins behave differently (?)</li>
+			</ul>
+		</p>
+		<p class="task">
+			Change the .parent display property to <b>flex</b>
+		</p>
 	</div>
 
-	<div class="css">
-		<textarea id="css-code" name="code">
-.parent {
-  display: block;
-}
-.child {
-  display: block;
-  margin-bottom: 10px;
-}</textarea>
+	<!-- <div class="final">
+		<img src="/assets/images/lesson1.png" alt="">
+	</div> -->
+
+	<div class="toggle">
+		<button id="html-toggle">HTML</button>
+		<button id="css-toggle">CSS</button>
 	</div>
 
-	<iframe id="preview" class="output">
-		
-	</iframe>
+	<div class="code">
+
+		<div class="html">
+			<textarea id="html-code" name="code">
+	<style>
+	.parent {
+	  display: block;
+	}
+	.child {
+	  display: block;
+	  margin-bottom: 10px;
+	}
+	</style>
+	<!doctype html>
+	<html>
+		<head>
+		<link rel="stylesheet" href="../css/style.css">
+		</head>
+	  <body>
+	  	<div class="parent">
+	    	<div class="child blue">1</div>
+	    	<div class="child orange">2</div>
+	    	<div class="child red">3</div>
+	    	<div class="child green">4</div>
+	  	</div>
+	  </body>
+	</html>
+			</textarea>
+		</div>
+
+		<div class="css">
+			<textarea id="css-code" name="code">
+	.parent {
+	  display: block;
+	}
+	.child {
+	  display: block;
+	  margin-bottom: 10px;
+	}</textarea>
+		</div>
+
+		<iframe id="preview" class="output">
+			
+		</iframe>
+	</div>
 </div>

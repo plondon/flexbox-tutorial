@@ -1,55 +1,59 @@
+// use flex
 #content {
-	display: flex;
-	flex-direction: column;
-	> div {
-		flex: 1;
-	}
-	h1 {
-		flex: 1;
-		align-self: center;
-	}
-	> div.intro {
-		font-size: 14px;
-		max-width: 1100px;
-		align-self: center;
-		margin-bottom: 20px;
-	}
-	> div.final {
-		text-align: center;
-		img {
-			max-height: 100px;
-		}
-	}
-	> div.code {
-		flex: 1;
-		padding: 2px;
+	.wrapper {
 		display: flex;
 		flex-direction: column;
-		> div, iframe {
+		> div {
 			flex: 1;
-			height: 250px;
-			&.css {
-				margin-top: -250px;
+		}
+		h1 {
+			flex: 1;
+			align-self: center;
+		}
+		> div.intro {
+			font-size: 14px;
+			max-width: 1100px;
+			align-self: center;
+			margin-bottom: 20px;
+		}
+		> div.final {
+			text-align: center;
+			img {
+				max-height: 100px;
 			}
 		}
-		iframe {
-			border: 0px;
-			border: 2px solid $cloud-blue;
-		}
-		@media (min-width: $mobile) {
-			flex-direction: row;
+		> div.code {
+			flex: 1;
+			padding: 2px;
+			display: flex;
+			flex-direction: column;
 			> div, iframe {
-				height: 500px;
-				margin: 0px 5px;
+				flex: 1;
+				height: 250px;
 				&.css {
-					margin-top: 0;
-					margin-left: calc(-50% + 5px);
+					margin-top: -250px;
+				}
+			}
+			iframe {
+				border: 0px;
+				border: 2px solid $cloud-blue;
+			}
+			@media (min-width: $mobile) {
+				flex-direction: row;
+				> div, iframe {
+					height: 500px;
+					margin: 0px 5px;
+					&.css {
+						margin-top: 0;
+						margin-left: calc(-50% + 5px);
+					}
 				}
 			}
 		}
 	}
 }
 
+// toggle code blocks
 .code {
 	.html, .css {
 		visibility: hidden;
@@ -57,6 +61,27 @@
 	.html, .css {
 		&.active {
 			visibility: visible;
+		}
+	}
+}
+
+// animations
+.wrapper.lesson {
+	> * {
+		@include transition(top 0.2s, opacity 0.2s);
+		@include reverse-delay(1,5,10);
+		position: relative;
+		opacity: 0;
+		top: -20px;
+	}
+}
+
+#content.active {
+	.wrapper.lesson {
+		> * {
+			@include delay(1,5,10);
+			opacity: 1;
+			top: 0;
 		}
 	}
 }

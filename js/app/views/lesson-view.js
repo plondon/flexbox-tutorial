@@ -17,20 +17,20 @@ var LessonView = Backbone.View.extend({
 			      ], function (lessonTemplate) {
 
 			var $template = $(lessonTemplate);
-			window.appView.render($template);
-			self.initPreview();
+
+			setTimeout(function() {
+				window.appView.render($template);
+				setTimeout(function() {
+					self.initPreview();
+				}, 0);
+			}, 1000);
 		});
-	},
-	render: function() {
-		this.initPreview();
 	},
 	initPreview: function() {
 		var $code = this.$el.find('.code');
 		this.pv = new PreviewView({ el: $code });
 	},
 	destroy: function() {
-		this.$content.html('');
-
 		this.pv.destroy();
 	}
 });

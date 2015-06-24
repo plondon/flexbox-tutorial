@@ -696,7 +696,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -732,65 +732,65 @@ blockquote {
   background-color: #ac2c24;
 }
 
-#content {
+#content .wrapper {
   display: flex;
   flex-direction: column;
 }
 
-#content > div {
+#content .wrapper > div {
   flex: 1;
 }
 
-#content h1 {
+#content .wrapper h1 {
   flex: 1;
   align-self: center;
 }
 
-#content > div.intro {
+#content .wrapper > div.intro {
   font-size: 14px;
   max-width: 1100px;
   align-self: center;
   margin-bottom: 20px;
 }
 
-#content > div.final {
+#content .wrapper > div.final {
   text-align: center;
 }
 
-#content > div.final img {
+#content .wrapper > div.final img {
   max-height: 100px;
 }
 
-#content > div.code {
+#content .wrapper > div.code {
   flex: 1;
   padding: 2px;
   display: flex;
   flex-direction: column;
 }
 
-#content > div.code > div, #content > div.code iframe {
+#content .wrapper > div.code > div, #content .wrapper > div.code iframe {
   flex: 1;
   height: 250px;
 }
 
-#content > div.code > div.css, #content > div.code iframe.css {
+#content .wrapper > div.code > div.css, #content .wrapper > div.code iframe.css {
   margin-top: -250px;
 }
 
-#content > div.code iframe {
+#content .wrapper > div.code iframe {
   border: 0px;
   border: 2px solid rgba(0, 133, 195, 0.5);
 }
 
 @media (min-width: 480px) {
-  #content > div.code {
+  #content .wrapper > div.code {
     flex-direction: row;
   }
-  #content > div.code > div, #content > div.code iframe {
+  #content .wrapper > div.code > div, #content .wrapper > div.code iframe {
     height: 500px;
     margin: 0px 5px;
   }
-  #content > div.code > div.css, #content > div.code iframe.css {
+  #content .wrapper > div.code > div.css, #content .wrapper > div.code iframe.css {
     margin-top: 0;
     margin-left: calc(-50% + 5px);
   }
@@ -802,6 +802,80 @@ blockquote {
 
 .code .html.active, .code .css.active {
   visibility: visible;
+}
+
+.wrapper.lesson > * {
+  -webkit-transition: top 0.2s, opacity 0.2s;
+  -moz-transition: top 0.2s, opacity 0.2s;
+  transition: top 0.2s, opacity 0.2s;
+  position: relative;
+  opacity: 0;
+  top: -20px;
+}
+
+.wrapper.lesson > *:nth-child(4) {
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.wrapper.lesson > *:nth-child(3) {
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.wrapper.lesson > *:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.wrapper.lesson > *:nth-child(1) {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.wrapper.lesson > *:nth-child(0) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+#content.active .wrapper.lesson > * {
+  opacity: 1;
+  top: 0;
+}
+
+#content.active .wrapper.lesson > *:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+#content.active .wrapper.lesson > *:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+#content.active .wrapper.lesson > *:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+#content.active .wrapper.lesson > *:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+#content.active .wrapper.lesson > *:nth-child(5) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  transition-delay: 0.5s;
 }
 
 .wrapper.home {
@@ -820,19 +894,43 @@ blockquote {
   top: -20px;
 }
 
+.wrapper.home > *:nth-child(2) {
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.wrapper.home > *:nth-child(1) {
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.wrapper.home > *:nth-child(0) {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
 #content.active .muscles, #content.active h1, #content.active a {
   top: 0px;
   opacity: 1;
 }
 
-#content.active h1 {
-  -webkit-transition: top 0.2s 0.2s, opacity 0.2s 0.2s;
-  -moz-transition: top 0.2s 0.2s, opacity 0.2s 0.2s;
-  transition: top 0.2s 0.2s, opacity 0.2s 0.2s;
+#content.active .wrapper.home > *:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 
-#content.active a {
-  -webkit-transition: top 0.2s 0.4s, opacity 0.2s 0.4s;
-  -moz-transition: top 0.2s 0.4s, opacity 0.2s 0.4s;
-  transition: top 0.2s 0.4s, opacity 0.2s 0.4s;
+#content.active .wrapper.home > *:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+#content.active .wrapper.home > *:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
