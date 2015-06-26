@@ -11,6 +11,9 @@ var AppView = Backbone.View.extend({
 		this.$content = $('#content');
 	},
 	changePage: function() {
+		$('.loader').addClass('loading');
+		$('.loader span').addClass('active');
+
 		this.$content.removeClass('active');
 	},
 	render: function($temp) {
@@ -18,6 +21,8 @@ var AppView = Backbone.View.extend({
 		_.delay(_.bind(function() {
 
 			this.$content.addClass('active');
+			$('.loader').removeClass('loading');
+			$('.loader span').removeClass('active');
 
 		}, this), window.wait/10);
 	},

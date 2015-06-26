@@ -707,6 +707,7 @@ html {
 body {
   font-family: "OpenSans";
   font-weight: 300;
+  margin: 0;
 }
 
 .wrapper {
@@ -768,6 +769,81 @@ a:hover {
 .underline {
   border-bottom: 2px solid #efefef;
   text-transform: uppercase;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.loader.loading {
+  z-index: 1;
+}
+
+.loader span {
+  background: rgba(0, 133, 195, 0.5);
+  position: absolute;
+  display: block;
+}
+
+.loader span.top, .loader span.bottom {
+  width: 0;
+  height: 4px;
+  -webkit-transition: width 250ms;
+  -moz-transition: width 250ms;
+  transition: width 250ms;
+}
+
+.loader span.top.active, .loader span.bottom.active {
+  width: 100%;
+}
+
+.loader span.left, .loader span.right {
+  height: 0;
+  width: 4px;
+  -webkit-transition: height 250ms;
+  -moz-transition: height 250ms;
+  transition: height 250ms;
+}
+
+.loader span.left.active, .loader span.right.active {
+  height: 100%;
+}
+
+.loader span.top {
+  top: 0px;
+  left: 0px;
+  -webkit-transition: width 250ms;
+  -moz-transition: width 250ms;
+  transition: width 250ms;
+}
+
+.loader span.bottom {
+  bottom: 0px;
+  right: 0px;
+  -webkit-transition: width 250ms 500ms;
+  -moz-transition: width 250ms 500ms;
+  transition: width 250ms 500ms;
+}
+
+.loader span.right {
+  top: 0px;
+  right: 0px;
+  -webkit-transition: width 250ms 250ms;
+  -moz-transition: width 250ms 250ms;
+  transition: width 250ms 250ms;
+}
+
+.loader span.left {
+  bottom: 0px;
+  left: 0px;
+  -webkit-transition: width 250ms 750ms;
+  -moz-transition: width 250ms 750ms;
+  transition: width 250ms 750ms;
 }
 
 #content .wrapper {

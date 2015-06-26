@@ -9,6 +9,7 @@ html {
 body {
 	font-family: $sans;
 	font-weight: 300;
+	margin: 0;
 }
 
 .wrapper {
@@ -64,4 +65,57 @@ a {
 .underline {
 	border-bottom: 2px solid $light-grey;
 	text-transform: uppercase;
+}
+
+.loader {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	left: 0;
+	top: 0;
+	&.loading {
+		z-index: 1;
+	}
+	span {
+		background: $cloud-blue;
+		position: absolute;
+		display: block;
+	}
+	span.top, span.bottom {
+		width: 0;
+		height: 4px;
+		@include transition(width 250ms);
+		&.active {
+			width: 100%;
+		}
+	}
+	span.left, span.right {
+		height: 0;
+		width: 4px;
+		@include transition(height 250ms);
+		&.active {
+			height: 100%;
+		}
+	}
+	span.top {
+		top: 0px;
+		left: 0px;
+		@include transition(width 250ms);
+	}
+	span.bottom {
+		bottom: 0px;
+		right: 0px;
+		@include transition(width 250ms 500ms);
+	}
+	span.right {
+		top: 0px;
+		right: 0px;
+		@include transition(width 250ms 250ms);
+	}
+	span.left {
+		bottom: 0px;
+		left: 0px;
+		@include transition(width 250ms 750ms);
+	}
 }
