@@ -696,7 +696,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -733,15 +733,39 @@ blockquote {
 }
 
 #content .wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
   flex-direction: column;
+  -ms-flex-direction: column;
 }
 
 #content .wrapper > div {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 
 #content .wrapper h1 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   align-self: center;
 }
@@ -753,6 +777,11 @@ blockquote {
   margin-bottom: 20px;
 }
 
+#content .wrapper > div.intro blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+}
+
 #content .wrapper > div.final {
   text-align: center;
 }
@@ -762,13 +791,37 @@ blockquote {
 }
 
 #content .wrapper > div.code {
-  flex: 1;
   padding: 2px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
   flex-direction: column;
+  -ms-flex-direction: column;
 }
 
 #content .wrapper > div.code > div, #content .wrapper > div.code iframe {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   height: 250px;
 }
@@ -784,7 +837,13 @@ blockquote {
 
 @media (min-width: 480px) {
   #content .wrapper > div.code {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
     flex-direction: row;
+    -ms-flex-direction: row;
   }
   #content .wrapper > div.code > div, #content .wrapper > div.code iframe {
     height: 500px;

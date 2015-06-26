@@ -1,6 +1,18 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 
+		// postcss: {
+		//   options: {
+		//     processors: [
+		//       require('autoprefixer-core')({browsers: 'last 2 versions'}), // add vendor prefixes
+		//       require('cssnano')() // minify the result
+		//     ]
+		//   },
+		//   dist: {
+		//     src: 'css/*.css'
+		//   }
+		// },
+
 		sass: {
 			dev: {
 				options: {
@@ -33,5 +45,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-shell-spawn');
+	// grunt.loadNpmTasks('grunt-postcss');
+
 	grunt.registerTask('default', ['shell:server', 'watch']);
 };
