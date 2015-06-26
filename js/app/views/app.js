@@ -19,11 +19,11 @@ var AppView = Backbone.View.extend({
 
 			this.$content.addClass('active');
 
-		}, this), 100);
+		}, this), window.wait/10);
 	},
 	events: {
-		'click a:not(a.outside-link)': function (e) {
-		  if ($(e.currentTarget).attr('target') === '_blank') { return; }
+		'click a': function (e) {
+		  if ($(e.currentTarget).attr('target') === '_blank') { return true; }
 
 		  var href = e.currentTarget.href.replace(window.location.origin, '');
 

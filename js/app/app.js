@@ -32,6 +32,7 @@ var AppRouter = Backbone.Router.extend({
 
 $(document).ready(function() {
 	window.$ = jQuery;
+	window.wait = 1;
 
 	window.appView = new AppView({ el: $('body') });
 	window.appRouter = new AppRouter();

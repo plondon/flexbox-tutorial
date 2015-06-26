@@ -7,16 +7,36 @@
 		}
 		h1 {
 			@include flex(1);
-			align-self: center;
+			@include align-self(center);
 		}
 		> div.intro {
 			font-size: 14px;
 			max-width: 1100px;
-			align-self: center;
 			margin-bottom: 20px;
+			@include display(flex);
+			@include align-self(center);
+			@include flex-direction(column);
 			blockquote {
+				margin: 10px 0;
+				padding: 20px 30px;
+				position: relative;
+				font-style: italic;
 				background: $off-white;
 				border-left: 10px solid $med-grey;
+				&:before {
+					top: 5px;
+					left: 5px;
+					font-size: 40px;
+					color: $med-grey;
+					position: absolute;
+					content: open-quote;
+				}
+			}
+			cite {
+				@include flex(1);
+				margin-top: -10px;
+				font-style: normal;
+				@include align-self(flex-end);
 			}
 		}
 		> div.final {

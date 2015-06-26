@@ -44,3 +44,15 @@ blockquote {
 .red {
 	background-color: $red;
 }
+
+a {
+	color: black;
+	@include transition(color $slow);
+	&:hover {
+		color: $cloud-blue;
+	}
+}
+
+ul, ol {
+	margin-top: 0px;
+}

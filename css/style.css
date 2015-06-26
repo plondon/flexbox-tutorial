@@ -732,6 +732,21 @@ blockquote {
   background-color: #ac2c24;
 }
 
+a {
+  color: black;
+  -webkit-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+a:hover {
+  color: rgba(0, 133, 195, 0.5);
+}
+
+ul, ol {
+  margin-top: 0px;
+}
+
 #content .wrapper {
   display: -webkit-box;
   display: -moz-box;
@@ -767,19 +782,68 @@ blockquote {
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-align-self: center;
+  -moz-align-self: center;
   align-self: center;
+  -ms-flex-item-align: center;
 }
 
 #content .wrapper > div.intro {
   font-size: 14px;
   max-width: 1100px;
-  align-self: center;
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  align-self: center;
+  -ms-flex-item-align: center;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
 }
 
 #content .wrapper > div.intro blockquote {
+  margin: 10px 0;
+  padding: 20px 30px;
+  position: relative;
+  font-style: italic;
   background: #f9f9f9;
   border-left: 10px solid #ccc;
+}
+
+#content .wrapper > div.intro blockquote:before {
+  top: 5px;
+  left: 5px;
+  font-size: 40px;
+  color: #ccc;
+  position: absolute;
+  content: open-quote;
+}
+
+#content .wrapper > div.intro cite {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-top: -10px;
+  font-style: normal;
+  -webkit-align-self: flex-end;
+  -moz-align-self: flex-end;
+  align-self: flex-end;
+  -ms-flex-item-align: end;
 }
 
 #content .wrapper > div.final {

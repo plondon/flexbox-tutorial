@@ -20,10 +20,13 @@ var LessonView = Backbone.View.extend({
 
 			setTimeout(function() {
 				window.appView.render($template);
+
+				// wait for #content to be appended
 				setTimeout(function() {
 					self.initPreview();
 				}, 0);
-			}, 1000);
+
+			}, window.wait);
 		});
 	},
 	initPreview: function() {
