@@ -24,6 +24,14 @@ blockquote {
 	font-family: $serif;
 }
 
+button {
+	background: white;
+	font-size: 14px;
+	cursor: pointer;
+	outline: none;
+	border: 0px;
+}
+
 .child {
 	color: white;
 	height: 100px;
@@ -53,6 +61,7 @@ a {
 	}
 }
 
-ul, ol {
-	margin-top: 0px;
+.underline {
+	border-bottom: 2px solid $light-grey;
+	text-transform: uppercase;
 }

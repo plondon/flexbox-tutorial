@@ -1,5 +1,5 @@
 <div class="wrapper lesson">
-	<h1>Lesson #1: display: flex</h1>
+	<h1 class="underline">Lesson #1: display: flex</h1>
 
 	<div class="intro">
 		<p>
@@ -9,7 +9,7 @@
 		<cite><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">MDN</a></cite>
 
 		<div class="tldr">
-			tl;dr:
+			<span class="underline">tl;dr</span>
 			<ul>
 				<li>goodbye floats</li>
 				<li>should make responsive easier</li>
@@ -18,7 +18,7 @@
 		</div>
 
 		<div class="instructions">
-			instructions:
+			<span class="underline">instructions</span>
 			<ol>
 				<li>Change the .parent <b>display</b> property to <b>flex</b></li>
 			</ol>
@@ -38,41 +38,41 @@
 
 		<div class="html">
 			<textarea id="html-code" name="code">
-	<style>
-	.parent {
-	  display: block;
-	}
-	.child {
-	  display: block;
-	  margin-bottom: 10px;
-	}
-	</style>
-	<!doctype html>
-	<html>
-		<head>
-		<link rel="stylesheet" href="../css/style.css">
-		</head>
-	  <body>
-	  	<div class="parent">
-	    	<div class="child blue">1</div>
-	    	<div class="child orange">2</div>
-	    	<div class="child red">3</div>
-	    	<div class="child green">4</div>
-	  	</div>
-	  </body>
-	</html>
-			</textarea>
+<style>
+.parent {
+  display: block;
+}
+.child {
+  display: block;
+  margin-bottom: 10px;
+}
+</style>
+<!doctype html>
+<html>
+	<head>
+	<link rel="stylesheet" href="../css/style.css">
+	</head>
+  <body>
+  	<div class="parent">
+    	<div class="child blue">1</div>
+    	<div class="child orange">2</div>
+    	<div class="child red">3</div>
+    	<div class="child green">4</div>
+  	</div>
+  </body>
+</html>
+</textarea>
 		</div>
 
 		<div class="css">
-			<textarea id="css-code" name="code">
-	.parent {
-	  display: block;
-	}
-	.child {
-	  display: block;
-	  margin-bottom: 10px;
-	}</textarea>
+<textarea id="css-code" name="code">
+.parent {
+  display: block;
+}
+.child {
+  display: block;
+  margin-bottom: 10px;
+}</textarea>
 		</div>
 
 		<iframe id="preview" class="output">

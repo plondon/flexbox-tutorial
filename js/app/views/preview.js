@@ -14,7 +14,7 @@ var PreviewView = Backbone.View.extend({
 		/* initialize html editor */
 		this.htmlEditor = CodeMirror.fromTextArea(($html[0]), {
 		  mode: 'htmlmixed',
-		  theme: 'monokai',
+		  theme: 'ttcn',
 		  tabSize: 2,
 		  lineNumbers: true,
 		  readOnly: true
@@ -23,7 +23,7 @@ var PreviewView = Backbone.View.extend({
 		/* initialize css editor */
 		this.cssEditor = CodeMirror.fromTextArea(($css[0]), {
 			mode: 'css',
-			theme: 'monokai',
+			theme: 'ttcn',
 			tabSize: 2,
 			lineNumbers: true
 		});
@@ -63,6 +63,8 @@ var PreviewView = Backbone.View.extend({
 
 		if (active) { return; }
 
+		$('#css-toggle').removeClass('active');
+		$('#html-toggle').addClass('active');
 		$('.css').removeClass('active');
 		$('.html').addClass('active');
 	},
@@ -71,6 +73,8 @@ var PreviewView = Backbone.View.extend({
 
 		if (active) { return; }
 
+		$('#html-toggle').removeClass('active');
+		$('#css-toggle').addClass('active');
 		$('.html').removeClass('active');
 		$('.css').addClass('active');
 	},

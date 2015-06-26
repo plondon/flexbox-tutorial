@@ -57,9 +57,9 @@
 					margin-top: -250px;
 				}
 			}
-			iframe {
+			iframe, > div {
 				border: 0px;
-				border: 2px solid $cloud-blue;
+				border: 2px solid $light-grey;
 			}
 			@media (min-width: $mobile) {
 				@include flex-direction(row);
@@ -72,6 +72,18 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+// toggle buttons
+.toggle {
+	button {
+		padding: 5px;
+		min-width: 60px;
+		&.active {
+			font-weight: bold;
+			font-style: italic;
 		}
 	}
 }
