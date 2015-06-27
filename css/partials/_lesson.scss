@@ -78,12 +78,15 @@
 
 // toggle buttons
 .toggle {
+	padding-left: 7px;
+	top: 2px !important;
 	button {
 		padding: 5px;
 		min-width: 60px;
+		font-weight: bold;
+
 		&.active {
-			font-weight: bold;
-			font-style: italic;
+			background-color: $light-grey;
 		}
 	}
 }

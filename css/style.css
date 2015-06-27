@@ -1018,14 +1018,19 @@ a:hover {
   }
 }
 
+.toggle {
+  padding-left: 7px;
+  top: 2px !important;
+}
+
 .toggle button {
   padding: 5px;
   min-width: 60px;
+  font-weight: bold;
 }
 
 .toggle button.active {
-  font-weight: bold;
-  font-style: italic;
+  background-color: #efefef;
 }
 
 .code .html, .code .css {
