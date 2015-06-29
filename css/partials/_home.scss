@@ -1,8 +1,8 @@
 .wrapper.home {
-	display: flex;
 	margin-top: 200px;
-	align-items: center;
-	flex-direction: column;
+	@include display (flex);
+	@include align-items(center);
+	@include flex-direction(column);
 	> * {
 		@include transition(top 0.2s, opacity 0.2s);
 		@include reverse-delay(1,3,10);
