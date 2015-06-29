@@ -5,6 +5,7 @@ require.config({
 		"underscore": "../lib/underscore.min",
 		"backbone": "../lib/backbone.min",
 		"text": "../lib/text",
+		"imagesloaded": "../lib/jquery.imagesloaded"
 	},
 	shim: {
 		underscore: {
@@ -13,6 +14,9 @@ require.config({
 		backbone: {
 			deps: ["jquery", "underscore"],
 			exports: "Backbone"
+		},
+		imagesloaded: {
+			deps: ["jquery"]
 		}
 	},
 	urlArgs: "bust=" + (new Date()).getTime(),
@@ -23,6 +27,8 @@ require([
 	"jquery",
 	"underscore",
 	"backbone",
+	"text",
+	"imagesloaded"
 ], function () {
 
 	require(['app'], function() { });

@@ -793,9 +793,6 @@ a:hover {
 .loader span.top, .loader span.bottom {
   width: 0;
   height: 4px;
-  -webkit-transition: width 250ms;
-  -moz-transition: width 250ms;
-  transition: width 250ms;
 }
 
 .loader span.top.active, .loader span.bottom.active {
@@ -805,9 +802,6 @@ a:hover {
 .loader span.left, .loader span.right {
   height: 0;
   width: 4px;
-  -webkit-transition: height 250ms;
-  -moz-transition: height 250ms;
-  transition: height 250ms;
 }
 
 .loader span.left.active, .loader span.right.active {
@@ -817,6 +811,9 @@ a:hover {
 .loader span.top {
   top: 0px;
   left: 0px;
+}
+
+.loader span.top.active {
   -webkit-transition: width 250ms;
   -moz-transition: width 250ms;
   transition: width 250ms;
@@ -825,6 +822,9 @@ a:hover {
 .loader span.bottom {
   bottom: 0px;
   right: 0px;
+}
+
+.loader span.bottom.active {
   -webkit-transition: width 250ms 500ms;
   -moz-transition: width 250ms 500ms;
   transition: width 250ms 500ms;
@@ -833,17 +833,23 @@ a:hover {
 .loader span.right {
   top: 0px;
   right: 0px;
-  -webkit-transition: width 250ms 250ms;
-  -moz-transition: width 250ms 250ms;
-  transition: width 250ms 250ms;
+}
+
+.loader span.right.active {
+  -webkit-transition: height 250ms 250ms;
+  -moz-transition: height 250ms 250ms;
+  transition: height 250ms 250ms;
 }
 
 .loader span.left {
   bottom: 0px;
   left: 0px;
-  -webkit-transition: width 250ms 750ms;
-  -moz-transition: width 250ms 750ms;
-  transition: width 250ms 750ms;
+}
+
+.loader span.left.active {
+  -webkit-transition: height 250ms 750ms;
+  -moz-transition: height 250ms 750ms;
+  transition: height 250ms 750ms;
 }
 
 #content .wrapper {

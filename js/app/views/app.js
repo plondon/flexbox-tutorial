@@ -18,13 +18,16 @@ var AppView = Backbone.View.extend({
 	},
 	render: function($temp) {
 		this.$content.html($temp);
-		_.delay(_.bind(function() {
 
-			this.$content.addClass('active');
-			$('.loader').removeClass('loading');
-			$('.loader span').removeClass('active');
+		this.$content.imagesLoaded(_.bind(function() {
+			_.delay(_.bind(function() {
 
-		}, this), window.wait/10);
+				this.$content.addClass('active');
+				$('.loader').removeClass('loading');
+				$('.loader span').removeClass('active');
+
+			}, this), window.wait/10);
+		}, this));
 	},
 	events: {
 		'click a': function (e) {

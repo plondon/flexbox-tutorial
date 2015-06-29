@@ -85,7 +85,6 @@ a {
 	span.top, span.bottom {
 		width: 0;
 		height: 4px;
-		@include transition(width 250ms);
 		&.active {
 			width: 100%;
 		}
@@ -93,7 +92,6 @@ a {
 	span.left, span.right {
 		height: 0;
 		width: 4px;
-		@include transition(height 250ms);
 		&.active {
 			height: 100%;
 		}
@@ -101,21 +99,29 @@ a {
 	span.top {
 		top: 0px;
 		left: 0px;
-		@include transition(width 250ms);
+		&.active {
+			@include transition(width 250ms);
+		}
 	}
 	span.bottom {
 		bottom: 0px;
 		right: 0px;
-		@include transition(width 250ms 500ms);
+		&.active {
+			@include transition(width 250ms 500ms);
+		}
 	}
 	span.right {
 		top: 0px;
 		right: 0px;
-		@include transition(width 250ms 250ms);
+		&.active {
+			@include transition(height 250ms 250ms);
+		}
 	}
 	span.left {
 		bottom: 0px;
 		left: 0px;
-		@include transition(width 250ms 750ms);
+		&.active {
+			@include transition(height 250ms 750ms);
+		}
 	}
 }
