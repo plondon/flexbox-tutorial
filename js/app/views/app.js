@@ -9,12 +9,16 @@ define([
 var AppView = Backbone.View.extend({
 	initialize: function() {
 		this.$content = $('#content');
+		this.init = false;
 	},
 	changePage: function() {
-		$('.loader').addClass('loading');
-		$('.loader span').addClass('active');
+		if ( this.init ) {
+			$('.loader').addClass('loading');
+			$('.loader span').addClass('active');
+		}
 
 		this.$content.removeClass('active');
+		this.init = true;
 	},
 	render: function($temp) {
 		this.$content.html($temp);

@@ -12,6 +12,7 @@ define([
 var AppRouter = Backbone.Router.extend({
 	initialize: function() {
 		console.log('ready');
+		this.init = false;
 	},
 	routes: {
 		"": "home",
@@ -20,8 +21,13 @@ var AppRouter = Backbone.Router.extend({
 	home: function() {
 		window.appView.changePage();
 		var $template = $(HomeTemplate);
+		var wait = this.init ? window.wait : 0;
 
-		window.appView.render($template);
+		setTimeout(function() {
+			window.appView.render($template);
+		}, wait);
+
+		this.init = true;
 	},
 	render: function(number) {
 		window.appView.changePage();
