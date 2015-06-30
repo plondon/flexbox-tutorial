@@ -33,6 +33,9 @@ var AppView = Backbone.View.extend({
 			}, this), window.wait/10);
 		}, this));
 	},
+	toggleNav: function() {
+		$('#header').toggleClass('active');
+	},
 	events: {
 		'click a': function (e) {
 		  if ($(e.currentTarget).attr('target') === '_blank') { return true; }
@@ -41,7 +44,8 @@ var AppView = Backbone.View.extend({
 
 		  window.appRouter.navigate(href, {trigger: true});
 		  e.preventDefault();
-		}
+		},
+		'click .toggle': 'toggleNav'
 	}
 });
 

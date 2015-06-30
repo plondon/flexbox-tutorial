@@ -12,6 +12,30 @@ body {
 	margin: 0;
 }
 
+#header {
+	@include display(flex);
+	div.toggle {
+		cursor: pointer;
+		margin-top: 20px;
+		margin-left: 20px;
+		@include transition(margin-left $fast);
+	}
+	#nav {
+		> ul {
+			margin-left: -100%;
+			@include transition(margin-left $fast);
+		}
+	}
+	&.active {
+		#nav > ul {
+			margin-left: 0;
+		}
+		div.toggle {
+			margin-left: 100%;
+		}
+	}
+}
+
 .wrapper {
 	max-width: $wrapper;
 	margin: 0 auto;
@@ -84,15 +108,19 @@ a {
 	}
 	span.top, span.bottom {
 		width: 0;
-		height: 4px;
+		height: 0px;
+		@include transition(height $slow);
 		&.active {
+			height: 4px;
 			width: 100%;
 		}
 	}
 	span.left, span.right {
 		height: 0;
-		width: 4px;
+		width: 0px;
+		@include transition(width $slow);
 		&.active {
+			width: 4px;
 			height: 100%;
 		}
 	}
@@ -100,28 +128,28 @@ a {
 		top: 0px;
 		left: 0px;
 		&.active {
-			@include transition(width 250ms);
+			@include transition(width 250ms, height 0ms);
 		}
 	}
 	span.bottom {
 		bottom: 0px;
 		right: 0px;
 		&.active {
-			@include transition(width 250ms 500ms);
+			@include transition(width 250ms 500ms, height 0ms);
 		}
 	}
 	span.right {
 		top: 0px;
 		right: 0px;
 		&.active {
-			@include transition(height 250ms 250ms);
+			@include transition(height 250ms 250ms, width 0ms);
 		}
 	}
 	span.left {
 		bottom: 0px;
 		left: 0px;
 		&.active {
-			@include transition(height 250ms 750ms);
+			@include transition(height 250ms 750ms, width 0ms);
 		}
 	}
 }

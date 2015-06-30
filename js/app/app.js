@@ -16,7 +16,7 @@ var AppRouter = Backbone.Router.extend({
 	},
 	routes: {
 		"": "home",
-		"lesson/:number": "render"
+		"lesson/:number": "render",
 	},
 	home: function() {
 		window.appView.changePage();
@@ -33,6 +33,8 @@ var AppRouter = Backbone.Router.extend({
 		window.appView.changePage();
 		if ( this.lv ) { this.lv.destroy(); }
 		this.lv = new LessonView({ el: $('#content'), lesson: number });
+
+		this.init = true;
 	},
 });
 
