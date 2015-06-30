@@ -33,7 +33,8 @@ var AppView = Backbone.View.extend({
 			}, this), window.wait/10);
 		}, this));
 	},
-	toggleNav: function() {
+	toggleNav: function(e) {
+		if ( !e ) { return; }
 		$('#header').toggleClass('active');
 	},
 	events: {
