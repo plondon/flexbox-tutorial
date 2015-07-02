@@ -38,6 +38,18 @@
 				font-style: normal;
 				@include align-self(flex-end);
 			}
+			.instructions {
+				pre {
+					margin: 0px;
+					padding: 10px 20px;
+					white-space: normal;
+					background: $pale-yellow;
+					border-left: 10px solid $dark-yellow;
+					code {
+						white-space: pre;
+					}
+				}
+			}
 		}
 		> div.final {
 			text-align: center;

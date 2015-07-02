@@ -993,6 +993,18 @@ a:hover {
   -ms-flex-item-align: end;
 }
 
+#content .wrapper > div.intro .instructions pre {
+  margin: 0px;
+  padding: 10px 20px;
+  white-space: normal;
+  background: #fff7e5;
+  border-left: 10px solid #ebe2cd;
+}
+
+#content .wrapper > div.intro .instructions pre code {
+  white-space: pre;
+}
+
 #content .wrapper > div.final {
   text-align: center;
 }
