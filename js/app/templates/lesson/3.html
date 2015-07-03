@@ -1,30 +1,27 @@
 <div class="wrapper lesson">
-	<h1 class="underline">Lesson #2: flex-direction</h1>
+	<h1 class="underline">Lesson #3: flex-wrap</h1>
 
 	<div class="intro">
 		<p>
-			Now that we've defined our parent as a flexbox container we can add influence the direction and the order of its children. The <b>flex-direction</b> can take four values: column | column-reverse | row | row-reverse. Mozilla says:
+		
 		</p>
-		<blockquote>Note that the value row and row-reverse are affected by the directionality of the flex container. If its dir attribute is ltr, row represents the horizontal axis oriented from the left to the right, and row-reverse from the right to the left; if the dir attribute is rtl, row represents the axis oriented from the right to the left, and row-reverse from the left to the right. </blockquote>
-		<cite><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction">MDN</a></cite>
+		<blockquote></blockquote>
+		<cite><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"></a></cite>
 
 		<div class="tldr">
 			<span class="underline">tl;dr</span>
 			<ul>
-				<li>children stack in columns or lay-out in rows</li>
-				<li>we can reverse the order of the children</li>
-				<li>something about dir seems important</li>
-				<li>the default property is row</li>
+				<li>the default property is nowrap</li>
 			</ul>
 		</div>
 
 		<div class="instructions">
 			<span class="underline">instructions</span>
-			<p>Mess around with the following attributes for flex-direction</p>
+			<p>Experiment with the following attributes for flex-wrap</p>
 			<pre>
 <code>.parent {
   ...
-  flex-direction: column | column-reverse | row | row-reverse;
+  flex-wrap: wrap | wrap-reverse | nowrap;
 }</code>
 			</ol>
 		</div>
@@ -46,10 +43,18 @@
 <style>
 .parent {
   display: flex;
+  flex-wrap: nowrap;
 }
 .child {
+	flex: 1;
   display: block;
   margin-bottom: 10px;
+}
+.child:nth-child(even) {
+	min-width: 400px;
+}
+.child:nth-child(odd) {
+	min-width: 30px;
 }
 </style>
 <!doctype html>
@@ -63,6 +68,10 @@
     	<div class="child orange">2</div>
     	<div class="child red">3</div>
     	<div class="child green">4</div>
+    	<div class="child blue">5</div>
+    	<div class="child orange">6</div>
+    	<div class="child red">7</div>
+    	<div class="child green">8</div>
   	</div>
   </body>
 </html>
@@ -73,10 +82,18 @@
 <textarea id="css-code" name="code">
 .parent {
   display: flex;
+  flex-wrap: nowrap;
 }
 .child {
+	flex: 1;
   display: block;
   margin-bottom: 10px;
+}
+.child:nth-child(even) {
+	min-width: 400px;
+}
+.child:nth-child(odd) {
+	min-width: 30px;
 }</textarea>
 		</div>
 

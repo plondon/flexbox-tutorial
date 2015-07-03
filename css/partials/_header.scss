@@ -1,0 +1,32 @@
+// possible to achieve with flex?
+#header {
+	height: 100%;
+	z-index: 100;
+	position: fixed;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 100px;
+	background-color: white;
+	border-right: 2px solid $light-grey;
+	@include transition(transform $fast);
+	@include transform(translateX(-100%));
+	div.toggle {
+		left: 100%;
+		cursor: pointer;
+		position: fixed;
+		margin-top: 20px;
+		margin-left: 20px;
+	}
+	&.active {
+		@include transform(translateX(0));
+	}
+	ol {
+		li {
+			font-size: 12px;
+			margin-bottom: 5px;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}

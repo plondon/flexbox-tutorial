@@ -12,12 +12,10 @@ var AppView = Backbone.View.extend({
 		this.init = false;
 	},
 	changePage: function() {
-		if ( this.init ) {
-			$('.loader').addClass('loading');
-			$('.loader span').addClass('active');
+		if (this.init) {
+			this.reset();
 		}
 
-		$('html, body').animate({ scrollTop: 0 });
 		this.$content.removeClass('active');
 		this.init = true;
 	},
@@ -35,8 +33,14 @@ var AppView = Backbone.View.extend({
 		}, this));
 	},
 	toggleNav: function(e) {
-		if ( !e ) { return; }
+		if (!e.originalEvent) { return; }
 		$('#header').toggleClass('active');
+	},
+	reset: function() {
+		$('.loader').addClass('loading');
+		$('#header').removeClass('active');
+		$('.loader span').addClass('active');
+		$('html, body').animate({ scrollTop: 0 });
 	},
 	events: {
 		'click a': function (e) {
@@ -47,7 +51,7 @@ var AppView = Backbone.View.extend({
 		  window.appRouter.navigate(href, {trigger: true});
 		  e.preventDefault();
 		},
-		'click .toggle': 'toggleNav'
+		'click #header .toggle': 'toggleNav'
 	}
 });
 
