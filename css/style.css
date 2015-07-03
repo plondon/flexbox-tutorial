@@ -1202,6 +1202,32 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   opacity: 1;
 }
 
+#footer .wrapper {
+  padding: 15px 5px;
+  padding-bottom: 30px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#footer .wrapper > a {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#footer .wrapper > a.next {
+  text-align: right;
+}
+
 .wrapper.home {
   margin-top: 100px;
   text-align: center;

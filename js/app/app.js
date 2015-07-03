@@ -12,7 +12,6 @@ define([
 
 var AppRouter = Backbone.Router.extend({
 	initialize: function() {
-		console.log('ready');
 		this.init = false;
 	},
 	routes: {
@@ -42,6 +41,7 @@ var AppRouter = Backbone.Router.extend({
 
 $(document).ready(function() {
 	window.$ = jQuery;
+	window.max = 2;
 	window.wait = 1000;
 
 	window.appView = new AppView({ el: $('body') });

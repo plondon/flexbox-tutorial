@@ -1,0 +1,13 @@
+#footer {
+	.wrapper {
+		padding: 15px 5px;
+		padding-bottom: 30px;
+		@include display(flex);
+		> a {
+			@include flex(1);
+			&.next {
+				text-align: right;
+			}
+		}
+	}
+}

@@ -17,6 +17,7 @@ var AppView = Backbone.View.extend({
 			$('.loader span').addClass('active');
 		}
 
+		$('html, body').animate({ scrollTop: 0 });
 		this.$content.removeClass('active');
 		this.init = true;
 	},
