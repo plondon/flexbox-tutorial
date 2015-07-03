@@ -38,6 +38,10 @@
 				font-style: normal;
 				@include align-self(flex-end);
 			}
+			.note {
+				font-style: italic;
+				font-size: 12px;
+			}
 			.instructions {
 				pre {
 					margin: 0px;

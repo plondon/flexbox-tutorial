@@ -959,6 +959,11 @@ a:hover {
   -ms-flex-item-align: end;
 }
 
+#content .wrapper > div.intro .note {
+  font-style: italic;
+  font-size: 12px;
+}
+
 #content .wrapper > div.intro .instructions pre {
   margin: 0px;
   padding: 10px 20px;

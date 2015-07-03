@@ -3,7 +3,7 @@
 
 	<div class="intro">
 		<p>
-		
+		With flexbox we can choose to let our children overflow their parent container, or wrap around the container's boundry. Notice that our <b>.parent</b> element's width is relative to the iframe, but it's willing to adjust its width based on the width of its children. This is pretty cool, and much more intuative. To understand how cool it is, try to simulate the same effect without flexbox.
 		</p>
 		<blockquote></blockquote>
 		<cite><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"></a></cite>
@@ -11,13 +11,13 @@
 		<div class="tldr">
 			<span class="underline">tl;dr</span>
 			<ul>
-				<li>the default property is nowrap</li>
+				<li>the default attribute is nowrap</li>
 			</ul>
 		</div>
 
 		<div class="instructions">
 			<span class="underline">instructions</span>
-			<p>Experiment with the following attributes for flex-wrap</p>
+			<p>Experiment with the following attributes for flex-wrap. Then try to achieve the nowrap effect without <code>display: flex;</code></p>
 			<pre>
 <code>.parent {
   ...
@@ -25,6 +25,9 @@
 }</code>
 			</ol>
 		</div>
+
+		<p class="note">Please note that I've added <code>flex: 1;</code> to the <b>.child</b> elements. So far we've only talked about parent properties. Children are also very important, but for now just know that flex: 1 is sort of default for initializing the flexbox child.
+		</p>
 	</div>
 
 	<!-- <div class="final">
@@ -47,7 +50,6 @@
 }
 .child {
 	flex: 1;
-  display: block;
   margin-bottom: 10px;
 }
 .child:nth-child(even) {
@@ -86,7 +88,6 @@
 }
 .child {
 	flex: 1;
-  display: block;
   margin-bottom: 10px;
 }
 .child:nth-child(even) {
