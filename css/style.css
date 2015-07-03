@@ -1188,6 +1188,20 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   transition-delay: 0.5s;
 }
 
+#footer {
+  -webkit-transition: top 0.2s 1s, opacity 0.2s 1s;
+  -moz-transition: top 0.2s 1s, opacity 0.2s 1s;
+  transition: top 0.2s 1s, opacity 0.2s 1s;
+  position: relative;
+  opacity: 0;
+  top: -20px;
+}
+
+#footer.active {
+  top: 0px;
+  opacity: 1;
+}
+
 .wrapper.home {
   margin-top: 100px;
   text-align: center;

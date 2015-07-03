@@ -3,9 +3,10 @@ define([
   'underscore',
   'backbone',
   'views/app',
+  'views/footer',
   'views/lesson-view',
   'text!templates/home.html'
-], function ($, _, Backbone, AppView, LessonView, HomeTemplate) {
+], function ($, _, Backbone, AppView, FooterView, LessonView, HomeTemplate) {
 
 "use strict";
 
@@ -33,6 +34,7 @@ var AppRouter = Backbone.Router.extend({
 		window.appView.changePage();
 		if ( this.lv ) { this.lv.destroy(); }
 		this.lv = new LessonView({ el: $('#content'), lesson: number });
+		this.fv = new FooterView({ el: $('#footer'), page: number });
 
 		this.init = true;
 	},

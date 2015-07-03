@@ -150,3 +150,14 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 		}
 	}
 }
+
+#footer {
+	@include transition(top 0.2s 1s, opacity 0.2s 1s);
+	position: relative;
+	opacity: 0;
+	top: -20px;
+	&.active {
+		top: 0px;
+		opacity: 1;
+	}
+}

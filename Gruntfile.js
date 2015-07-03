@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+	var ip = grunt.option('ip') || 'localhost';
 	grunt.initConfig({
 
 		// postcss: {
@@ -33,7 +34,7 @@ module.exports = function(grunt) {
 
 		shell: {
 			server: {
-				command: 'killall php; php -S localhost:3000',
+				command: 'killall php; php -S' + ip + ':3000',
 				options: {
 					async: true
 				}
