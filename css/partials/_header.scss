@@ -1,24 +1,31 @@
 // possible to achieve with flex?
 #header {
+	top: 0;
 	height: 100%;
 	z-index: 100;
 	position: fixed;
-	padding-top: 10px;
+	padding-top: 20px;
 	padding-left: 5px;
-	padding-right: 100px;
-	background-color: white;
+	padding-right: 150px;
 	border-right: 2px solid $light-grey;
 	@include transition(transform $fast);
 	@include transform(translateX(-100%));
+	background-color: rgba(255,255,255,0.8);
 	div.toggle {
 		left: 100%;
 		cursor: pointer;
 		position: fixed;
 		margin-top: 20px;
 		margin-left: 20px;
+		@include transition(margin-left $fast $fast, margin-top $fast);
 	}
 	&.active {
 		@include transform(translateX(0));
+		div.toggle {
+			margin-top: 0px;
+			margin-left: -60px;
+			@include transition(margin-left $fast, margin-top $fast $fast);
+		}
 	}
 	ol {
 		li {

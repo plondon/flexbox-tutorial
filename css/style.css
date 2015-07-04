@@ -1174,13 +1174,13 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 }
 
 #header {
+  top: 0;
   height: 100%;
   z-index: 100;
   position: fixed;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-left: 5px;
-  padding-right: 100px;
-  background-color: white;
+  padding-right: 150px;
   border-right: 2px solid #efefef;
   -webkit-transition: -webkit-transform 0.2s;
   -moz-transition: -moz-transform 0.2s;
@@ -1190,6 +1190,7 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 #header div.toggle {
@@ -1198,6 +1199,9 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   position: fixed;
   margin-top: 20px;
   margin-left: 20px;
+  -webkit-transition: margin-left 0.2s 0.2s, margin-top 0.2s;
+  -moz-transition: margin-left 0.2s 0.2s, margin-top 0.2s;
+  transition: margin-left 0.2s 0.2s, margin-top 0.2s;
 }
 
 #header.active {
@@ -1206,6 +1210,14 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
+}
+
+#header.active div.toggle {
+  margin-top: 0px;
+  margin-left: -60px;
+  -webkit-transition: margin-left 0.2s, margin-top 0.2s 0.2s;
+  -moz-transition: margin-left 0.2s, margin-top 0.2s 0.2s;
+  transition: margin-left 0.2s, margin-top 0.2s 0.2s;
 }
 
 #header ol li {

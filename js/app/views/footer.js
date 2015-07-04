@@ -18,6 +18,9 @@ var FooterView = Backbone.View.extend({
 		var $temp = $(_.template(FooterTemplate, data));
 
 		this.$el.html($temp).addClass('active');
+	},
+	destroy: function() {
+		this.$el.html('');
 	}
 });
 

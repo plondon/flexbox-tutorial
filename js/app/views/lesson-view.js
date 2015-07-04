@@ -13,20 +13,19 @@ var LessonView = Backbone.View.extend({
 		this.$content = $('#content');
 
 		var self = this;
+		// require lesson template
 		require(['text!templates/lesson/' + this.lesson + '.html'
 			      ], function (lessonTemplate) {
 
 			var $template = $(lessonTemplate);
 
+			window.appView.render($template);
+
+			// wait for #content to be appended
 			setTimeout(function() {
-				window.appView.render($template);
+				self.initPreview();
+			}, 0);
 
-				// wait for #content to be appended
-				setTimeout(function() {
-					self.initPreview();
-				}, 0);
-
-			}, window.wait);
 		});
 	},
 	initPreview: function() {
@@ -34,7 +33,7 @@ var LessonView = Backbone.View.extend({
 		this.pv = new PreviewView({ el: $code });
 	},
 	destroy: function() {
-		this.pv.destroy();
+		if ( this.pv ) { this.pv.destroy(); }
 	}
 });
 

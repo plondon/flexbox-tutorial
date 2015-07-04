@@ -19,6 +19,7 @@ var AppRouter = Backbone.Router.extend({
 		"lesson/:number": "render",
 	},
 	home: function() {
+		this.reset();
 		window.appView.changePage();
 		var $template = $(HomeTemplate);
 		var wait = this.init ? window.wait : 0;
@@ -30,13 +31,21 @@ var AppRouter = Backbone.Router.extend({
 		this.init = true;
 	},
 	render: function(number) {
+		this.reset();
 		window.appView.changePage();
-		if ( this.lv ) { this.lv.destroy(); }
-		this.lv = new LessonView({ el: $('#content'), lesson: number });
-		this.fv = new FooterView({ el: $('#footer'), page: number });
+		var wait = this.init ? window.wait : 0;
+
+		setTimeout(_.bind(function() {
+			this.lv = new LessonView({ el: $('#content'), lesson: number });
+			this.fv = new FooterView({ el: $('#footer'), page: number });
+		}, this), wait);
 
 		this.init = true;
 	},
+	reset: function() {
+		if ( this.fv ) { this.fv.destroy(); }
+		if ( this.lv ) { this.lv.destroy(); }
+	}
 });
 
 $(document).ready(function() {
