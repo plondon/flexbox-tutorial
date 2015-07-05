@@ -1247,6 +1247,10 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   text-decoration: none;
 }
 
+#header ol li.active a {
+  color: rgba(0, 133, 195, 0.5);
+}
+
 #footer .wrapper {
   padding: 15px 5px;
   padding-bottom: 30px;

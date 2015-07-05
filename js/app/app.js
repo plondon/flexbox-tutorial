@@ -3,10 +3,11 @@ define([
   'underscore',
   'backbone',
   'views/app',
+  'views/header',
   'views/footer',
   'views/lesson-view',
   'text!templates/home.html'
-], function ($, _, Backbone, AppView, FooterView, LessonView, HomeTemplate) {
+], function ($, _, Backbone, AppView, HeaderView, FooterView, LessonView, HomeTemplate) {
 
 "use strict";
 
@@ -24,9 +25,11 @@ var AppRouter = Backbone.Router.extend({
 		var $template = $(HomeTemplate);
 		var wait = this.init ? window.wait : 0;
 
-		setTimeout(function() {
+		this.hv = new HeaderView({ el: $('#header') });
+		
+		setTimeout(_.bind(function() {
 			window.appView.render($template);
-		}, wait);
+		}, this), wait);
 
 		this.init = true;
 	},
@@ -34,6 +37,7 @@ var AppRouter = Backbone.Router.extend({
 		this.reset();
 		window.appView.changePage();
 		var wait = this.init ? window.wait : 0;
+		this.hv = new HeaderView({ el: $('#header'), page: number });
 
 		setTimeout(_.bind(function() {
 			this.lv = new LessonView({ el: $('#content'), lesson: number });
@@ -45,6 +49,7 @@ var AppRouter = Backbone.Router.extend({
 	reset: function() {
 		if ( this.fv ) { this.fv.destroy(); }
 		if ( this.lv ) { this.lv.destroy(); }
+		if ( this.hv ) { this.hv.destroy(); }
 	}
 });
 

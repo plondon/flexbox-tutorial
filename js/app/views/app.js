@@ -32,13 +32,8 @@ var AppView = Backbone.View.extend({
 			}, this), window.wait/10);
 		}, this));
 	},
-	toggleNav: function(e) {
-		if (!e.originalEvent) { return; }
-		$('#header').toggleClass('active');
-	},
 	reset: function() {
 		$('.loader').addClass('loading');
-		$('#header').removeClass('active');
 		$('.loader span').addClass('active');
 		$('html, body').animate({ scrollTop: 0 });
 	},
@@ -50,8 +45,7 @@ var AppView = Backbone.View.extend({
 
 		  window.appRouter.navigate(href, {trigger: true});
 		  e.preventDefault();
-		},
-		'click #header .toggle': 'toggleNav'
+		}
 	}
 });
 

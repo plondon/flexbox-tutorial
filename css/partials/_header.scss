@@ -46,6 +46,11 @@
 			a {
 				text-decoration: none;
 			}
+			&.active {
+				a {
+					color: $cloud-blue;
+				}
+			}
 		}
 	}
 }

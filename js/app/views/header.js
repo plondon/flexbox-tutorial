@@ -17,8 +17,9 @@ var HeaderView = Backbone.View.extend({
 	},
 	render: function() {
 		this.$lessons.removeClass('active');
+		if ( !this.page ) { return; }
+
 		var cur = this.$lessons.splice(this.page - 1, 1);
-		
 		$(cur).addClass('active');
 	},
 	toggleNav: function(e) {
@@ -30,7 +31,7 @@ var HeaderView = Backbone.View.extend({
 			this.$el.addClass('active');
 		}
 	},
-	reset: function() {
+	destroy: function() {
 		this.$lessons.removeClass('active');
 	},
 	events: {
