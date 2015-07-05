@@ -11,7 +11,8 @@
 	@include transition(transform $fast);
 	@include transform(translateX(-100%));
 	background-color: rgba(255,255,255,0.8);
-	div.toggle {
+	div.toggle, div.home {
+		top: 0;
 		left: 100%;
 		cursor: pointer;
 		position: fixed;
@@ -19,13 +20,24 @@
 		margin-left: 20px;
 		@include transition(margin-left $fast $fast, margin-top $fast);
 	}
+	div.home {
+		@include transition(margin-top $fast, opacity $fast);
+		margin-left: -65px;
+		margin-top: 20px;
+		opacity: 0;
+	}
 	&.active {
 		@include transform(translateX(0));
 		div.toggle {
-			margin-top: 0px;
-			margin-left: -60px;
+			margin-top: 10px;
+			margin-left: -40px;
 			@include transition(margin-left $fast, margin-top $fast $fast);
 		}
+		div.home {
+			opacity: 1;
+			margin-top: 12px;
+			@include transition(margin-top $fast $slow, opacity $fast $slow);
+		}	
 	}
 	ol {
 		li {

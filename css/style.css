@@ -1193,7 +1193,8 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-#header div.toggle {
+#header div.toggle, #header div.home {
+  top: 0;
   left: 100%;
   cursor: pointer;
   position: fixed;
@@ -1202,6 +1203,15 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   -webkit-transition: margin-left 0.2s 0.2s, margin-top 0.2s;
   -moz-transition: margin-left 0.2s 0.2s, margin-top 0.2s;
   transition: margin-left 0.2s 0.2s, margin-top 0.2s;
+}
+
+#header div.home {
+  -webkit-transition: margin-top 0.2s, opacity 0.2s;
+  -moz-transition: margin-top 0.2s, opacity 0.2s;
+  transition: margin-top 0.2s, opacity 0.2s;
+  margin-left: -65px;
+  margin-top: 20px;
+  opacity: 0;
 }
 
 #header.active {
@@ -1213,11 +1223,19 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 }
 
 #header.active div.toggle {
-  margin-top: 0px;
-  margin-left: -60px;
+  margin-top: 10px;
+  margin-left: -40px;
   -webkit-transition: margin-left 0.2s, margin-top 0.2s 0.2s;
   -moz-transition: margin-left 0.2s, margin-top 0.2s 0.2s;
   transition: margin-left 0.2s, margin-top 0.2s 0.2s;
+}
+
+#header.active div.home {
+  opacity: 1;
+  margin-top: 12px;
+  -webkit-transition: margin-top 0.2s 0.4s, opacity 0.2s 0.4s;
+  -moz-transition: margin-top 0.2s 0.4s, opacity 0.2s 0.4s;
+  transition: margin-top 0.2s 0.4s, opacity 0.2s 0.4s;
 }
 
 #header ol li {
