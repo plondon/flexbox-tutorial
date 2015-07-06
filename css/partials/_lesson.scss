@@ -39,7 +39,9 @@
 				@include align-self(flex-end);
 			}
 			.note {
-				font-style: italic;
+				border-left: 10px solid $dark-red;
+				background: $pale-red;
+				padding: 10px 20px;
 				font-size: 12px;
 			}
 			.instructions {

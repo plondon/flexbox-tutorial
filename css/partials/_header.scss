@@ -26,6 +26,25 @@
 		margin-top: 20px;
 		opacity: 0;
 	}
+	ol {
+		li {
+			top: 10px;
+			opacity: 0;
+			font-size: 12px;
+			margin-bottom: 5px;
+			position: relative;
+			@include reverse-delay(1, 3, 10);
+			@include transition(top $fast $slow, opacity $fast $slow);
+			a {
+				text-decoration: none;
+			}
+			&.active {
+				a {
+					color: $cloud-blue;
+				}
+			}
+		}
+	}
 	&.active {
 		@include transform(translateX(0));
 		div.toggle {
@@ -37,20 +56,11 @@
 			opacity: 1;
 			margin-top: 12px;
 			@include transition(margin-top $fast $slow, opacity $fast $slow);
-		}	
-	}
-	ol {
-		li {
-			font-size: 12px;
-			margin-bottom: 5px;
-			a {
-				text-decoration: none;
-			}
-			&.active {
-				a {
-					color: $cloud-blue;
-				}
-			}
+		}
+		ol li {
+			top: 0px;
+			opacity: 1;
+			@include delay(1, 3, 10);
 		}
 	}
 }
