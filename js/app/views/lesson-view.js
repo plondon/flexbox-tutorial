@@ -2,8 +2,9 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/preview'
-], function ($, _, Backbone, PreviewView) {
+  'views/preview',
+  'views/codereview'
+], function ($, _, Backbone, PreviewView, CodeReView) {
 
 "use strict";
 
@@ -24,6 +25,7 @@ var LessonView = Backbone.View.extend({
 			// wait for #content to be appended
 			setTimeout(function() {
 				self.initPreview();
+				self.validSwitch();
 			}, 0);
 
 		});
@@ -32,8 +34,36 @@ var LessonView = Backbone.View.extend({
 		var $code = this.$el.find('.code');
 		this.pv = new PreviewView({ el: $code });
 	},
+	validSwitch: function() {
+		switch (this.lesson) {
+			case '1':
+				this.cv = new CodeReView({ parent: this, 
+																	 property: 'display', 
+																	 answers: ['flex;'] })
+				break;
+			case '2':
+				this.cv = new CodeReView({ parent: this, 
+																	 property: 'flex-direction', 
+																	 answers: ['row;',
+																	 				 'column;',
+																	 				 'row-reverse;',
+																	         'column-reverse;'
+																	         ] });
+				break;
+			case '3':
+				this.cv = new CodeReView({ parent: this, 
+																	 property: 'flex-wrap', 
+																	 answers: ['wrap;',
+																	 				 'nowrap;',
+																	 				 'wrap-reverse;'
+																	         ] });
+			default:
+				// default
+		}
+	},
 	destroy: function() {
 		if ( this.pv ) { this.pv.destroy(); }
+		if ( this.cv ) { this.cv.destroy(); }
 	}
 });
 
