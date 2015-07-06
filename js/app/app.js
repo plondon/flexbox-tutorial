@@ -26,7 +26,7 @@ var AppRouter = Backbone.Router.extend({
 		var wait = this.init ? window.wait : 0;
 
 		this.hv = new HeaderView({ el: $('#header') });
-		
+
 		setTimeout(_.bind(function() {
 			window.appView.render($template);
 		}, this), wait);
@@ -56,7 +56,7 @@ var AppRouter = Backbone.Router.extend({
 $(document).ready(function() {
 	window.$ = jQuery;
 	window.max = 3;
-	window.wait = 1000;
+	window.wait = 750;
 
 	window.appView = new AppView({ el: $('body') });
 	window.appRouter = new AppRouter();
