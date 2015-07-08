@@ -35,14 +35,18 @@ var LessonView = Backbone.View.extend({
 		this.pv = new PreviewView({ el: $code });
 	},
 	validSwitch: function() {
+		var $el = $('.css .CodeMirror-code');
+
 		switch (this.lesson) {
 			case '1':
-				this.cv = new CodeReView({ parent: this, 
+				this.cv = new CodeReView({ el: $el,
+																	 parent: this, 
 																	 property: 'display', 
 																	 answers: ['flex;'] })
 				break;
 			case '2':
-				this.cv = new CodeReView({ parent: this, 
+				this.cv = new CodeReView({ el: $el,
+																	 parent: this, 
 																	 property: 'flex-direction', 
 																	 answers: ['row;',
 																	 				 'column;',
@@ -51,7 +55,8 @@ var LessonView = Backbone.View.extend({
 																	         ] });
 				break;
 			case '3':
-				this.cv = new CodeReView({ parent: this, 
+				this.cv = new CodeReView({ el: $el,
+																	 parent: this, 
 																	 property: 'flex-wrap', 
 																	 answers: ['wrap;',
 																	 				 'nowrap;',

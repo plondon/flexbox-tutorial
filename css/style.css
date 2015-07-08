@@ -1031,6 +1031,10 @@ a:hover {
   border: 2px solid #efefef;
 }
 
+#content .wrapper > div.code.valid > div {
+  border: 2px solid #51c96d;
+}
+
 @media (min-width: 480px) {
   #content .wrapper > div.code {
     -webkit-box-orient: horizontal;

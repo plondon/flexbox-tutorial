@@ -79,6 +79,11 @@
 				border: 0px;
 				border: 2px solid $light-grey;
 			}
+			&.valid {
+				> div {
+					border: 2px solid $green;
+				}
+			}
 			@media (min-width: $mobile) {
 				@include flex-direction(row);
 				> div, iframe {
