@@ -43,6 +43,11 @@
 					color: $cloud-blue;
 				}
 			}
+			&.valid {
+				a {
+					color: $green;
+				}
+			}
 		}
 	}
 	&.active {

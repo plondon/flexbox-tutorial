@@ -1257,6 +1257,10 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   color: rgba(0, 133, 195, 0.5);
 }
 
+#header ol li.valid a {
+  color: #51c96d;
+}
+
 #header.active {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);

@@ -49,7 +49,6 @@ var AppRouter = Backbone.Router.extend({
 	reset: function() {
 		if ( this.fv ) { this.fv.destroy(); }
 		if ( this.lv ) { this.lv.destroy(); }
-		if ( this.hv ) { this.hv.destroy(); }
 	}
 });
 

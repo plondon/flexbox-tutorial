@@ -33,7 +33,13 @@ var CodeReView = Backbone.View.extend({
 		return this.$el.text().replace(/\d/g, '').replace(' ', '');
 	},
 	completed: function() {
-		$('.code').addClass('valid');
+		appRouter.hv.toggleNav();
+		setTimeout(function() {
+			appRouter.hv.$el.find('li.active').addClass('valid');
+			setTimeout(function() {
+				appRouter.hv.toggleNav();
+			}, 2000);
+		}, 500);
 	},
 	destroy: function() {
 		this.remove();
