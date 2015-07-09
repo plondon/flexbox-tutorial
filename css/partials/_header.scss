@@ -37,15 +37,27 @@
 			@include transition(top $fast $slow, opacity $fast $slow);
 			a {
 				text-decoration: none;
-			}
-			&.active {
-				a {
-					color: $cloud-blue;
+				&:hover {
+					color: black;
 				}
 			}
-			&.valid {
-				a {
-					color: $green;
+			&:before {
+				content: '';
+				top: 6px;
+			  left: -33px;
+				width: 6px;
+				height: 6px;
+				position: absolute;
+				border-radius: 10px;
+			}
+			&:hover, &.active {
+				&:before {
+					background-color: $cloud-blue;
+				}
+			}
+			&.valid, &.valid:hover {
+				&:before {
+					background-color: $green;
 				}
 			}
 		}

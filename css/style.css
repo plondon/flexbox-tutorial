@@ -1253,12 +1253,26 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   text-decoration: none;
 }
 
-#header ol li.active a {
-  color: rgba(0, 133, 195, 0.5);
+#header ol li a:hover {
+  color: black;
 }
 
-#header ol li.valid a {
-  color: #51c96d;
+#header ol li:before {
+  content: '';
+  top: 6px;
+  left: -33px;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  border-radius: 10px;
+}
+
+#header ol li:hover:before, #header ol li.active:before {
+  background-color: rgba(0, 133, 195, 0.5);
+}
+
+#header ol li.valid:before, #header ol li.valid:hover:before {
+  background-color: #51c96d;
 }
 
 #header.active {
