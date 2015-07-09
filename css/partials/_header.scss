@@ -81,3 +81,11 @@
 		}
 	}
 }
+
+#theme-toggle {
+	@include display(flex);
+	@include align-items(flex-end);
+	> i {
+		@include flex(1);
+	}
+}
