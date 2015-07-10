@@ -57,6 +57,8 @@ $(document).ready(function() {
 	window.max = 3;
 	window.wait = 750;
 
+	// use $.cookie to set
+
 	window.appView = new AppView({ el: $('body') });
 	window.appRouter = new AppRouter();
 	Backbone.history.start({pushState: true});

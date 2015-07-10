@@ -42,7 +42,7 @@ var LessonView = Backbone.View.extend({
 				this.cv = new CodeReView({ el: $el,
 																	 parent: this, 
 																	 property: 'display', 
-																	 answers: ['flex;'] })
+																	 answers: ['flex;'] });
 				break;
 			case '2':
 				this.cv = new CodeReView({ el: $el,
@@ -62,6 +62,7 @@ var LessonView = Backbone.View.extend({
 																	 				 'nowrap;',
 																	 				 'wrap-reverse;'
 																	         ] });
+				break;
 			default:
 				// default
 		}

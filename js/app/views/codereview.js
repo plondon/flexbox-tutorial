@@ -43,7 +43,9 @@ var CodeReView = Backbone.View.extend({
 
 			// CLOSE NAVIGATION
 			setTimeout(function() {
+
 				appRouter.hv.toggleNav();
+				
 			}, 2000);
 
 		}, 500);
