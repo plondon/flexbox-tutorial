@@ -32,6 +32,12 @@ var AppView = Backbone.View.extend({
 			}, this), window.wait/10);
 		}, this));
 	},
+	dayTheme: function() {
+		this.$el.removeClass('night-theme');
+	},
+	nightTheme: function() {
+		this.$el.addClass('night-theme');
+	},
 	reset: function() {
 		$('.loader').addClass('loading');
 		$('.loader span').addClass('active');
@@ -45,7 +51,9 @@ var AppView = Backbone.View.extend({
 
 		  window.appRouter.navigate(href, {trigger: true});
 		  e.preventDefault();
-		}
+		},
+		'click #theme-toggle .fa-sun-o': 'dayTheme',
+		'click #theme-toggle .fa-moon-o': 'nightTheme'
 	}
 });
 

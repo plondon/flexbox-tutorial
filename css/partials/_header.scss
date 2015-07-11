@@ -83,9 +83,20 @@
 }
 
 #theme-toggle {
+	margin-top: 25px;
 	@include display(flex);
-	@include align-items(flex-end);
+	@include justify-content(flex-end);
 	> i {
+		max-width: 40px;
+		cursor: pointer;
 		@include flex(1);
+		&:before {
+			@include transition(color $slow);
+		}
+		&:hover {
+			&:before {
+				color: $cloud-blue;
+			}
+		}
 	}
 }

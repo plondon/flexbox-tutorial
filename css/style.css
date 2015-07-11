@@ -1323,6 +1323,7 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 }
 
 #theme-toggle {
+  margin-top: 25px;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -1330,18 +1331,20 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-  -moz-box-align: end;
-  box-align: end;
-  -webkit-align-items: flex-end;
-  -moz-align-items: flex-end;
-  -ms-align-items: flex-end;
-  -o-align-items: flex-end;
-  align-items: flex-end;
-  -ms-flex-align: end;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: end;
 }
 
 #theme-toggle > i {
+  max-width: 40px;
+  cursor: pointer;
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   box-flex: 1;
@@ -1349,6 +1352,16 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+#theme-toggle > i:before {
+  -webkit-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+#theme-toggle > i:hover:before {
+  color: rgba(0, 133, 195, 0.5);
 }
 
 #footer .wrapper {
