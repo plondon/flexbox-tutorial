@@ -3,25 +3,28 @@
 
 	<div class="intro">
 		<p>
-		
+			Using justify-content allows us to control the alignment along the main axis of the flexbox. <code>justify:content;</code> can take 5 separate attributes. Here is a synopsis of each by Chris Coyier:
 		</p>
 
-		<div class="tldr">
-			<span class="underline">tl;dr</span>
+		<blockquote>
 			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
+				<li><code>flex-start</code> (default): items are packed toward the start line</li>
+				<li><code>flex-end</code> : items are packed toward the end line</li>
+				<li><code>center</code> : items are centered along the line</li>
+				<li><code>space-between</code> : items are evenly distributed in the line; first item is on the start line, last item on the end line</li>
+				<li><code>space-around</code> : items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.</li>
 			</ul>
-		</div>
+		</blockquote>
+		<cite><a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks</a></cite>
 
 		<div class="instructions">
 			<span class="underline">instructions</span>
-			<p></p>
+			<p>Give justify-content a shot by trying out all 5 attributes</p>
 			<pre>
-<code>
-<!-- CODE INSTRUCTIONS -->
-</code>
+<code>.parent {
+  ...
+  justify-content: flex-start | flex-end | center | space-between | space-around;
+}</code>
 			</ol>
 		</div>
 		<!-- 
@@ -40,7 +43,25 @@
 		<div class="html">
 			<textarea id="html-code" name="code">
 <style>
-/* HTML CSS */
+.parent {
+	display: flex;
+}
+
+.child {
+	flex: 1;
+}
+
+.child:first-child {
+	max-width: 50px;
+}
+
+.child:nth-child(2) {
+	max-width: 100px;
+}
+
+.child:last-child {
+	max-width: 150px;
+}
 </style>
 <!doctype html>
 <html>
@@ -52,11 +73,6 @@
     	<div class="child blue">1</div>
     	<div class="child orange">2</div>
     	<div class="child red">3</div>
-    	<div class="child green">4</div>
-    	<div class="child blue">5</div>
-    	<div class="child orange">6</div>
-    	<div class="child red">7</div>
-    	<div class="child green">8</div>
   	</div>
   </body>
 </html>
@@ -65,7 +81,25 @@
 
 		<div class="css">
 <textarea id="css-code" name="code">
-<!-- CSS CODE (mirrors html code) -->
+.parent {
+	display: flex;
+}
+
+.child {
+	flex: 1;
+}
+
+.child:first-child {
+	max-width: 50px;
+}
+
+.child:nth-child(2) {
+	max-width: 100px;
+}
+
+.child:last-child {
+	max-width: 150px;
+}
 </textarea>
 		</div>
 
