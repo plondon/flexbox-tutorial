@@ -49,19 +49,30 @@ var LessonView = Backbone.View.extend({
 																	 parent: this, 
 																	 property: 'flex-direction', 
 																	 answers: ['row;',
-																	 				 'column;',
-																	 				 'row-reverse;',
-																	         'column-reverse;'
-																	         ] });
+																	 				   'column;',
+																	 				   'row-reverse;',
+																	           'column-reverse;']
+																});
 				break;
 			case '3':
 				this.cv = new CodeReView({ el: $el,
 																	 parent: this, 
 																	 property: 'flex-wrap', 
 																	 answers: ['wrap;',
-																	 				 'nowrap;',
-																	 				 'wrap-reverse;'
-																	         ] });
+																	 				   'nowrap;',
+																	 				   'wrap-reverse;']
+																});
+				break;
+			case '4':
+				this.cv = new CodeReView({ el: $el,
+																	 parent: this, 
+																	 property: 'justify-content', 
+																	 answers: ['space-between;',
+																	 					 'space-around;',
+																	 					 'flex-start;',
+																	 				   'flex-end;',
+																	 				   'center;']
+															  });
 				break;
 			default:
 				// default

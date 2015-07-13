@@ -9,30 +9,45 @@ define([
 var CodeReView = Backbone.View.extend({
 	initialize: function(opts) {
 		this.parent = opts.parent;
+		this.length = opts.answers.length;
 		this.answers = opts.answers;
 		this.property = opts.property + ': ';
-		this.complete = false;
+		this.complete = [];
 
 		this.bindEvents();
 	},
 	isValid: function() {
-		if ( this.complete ) { return; }
-		var code = this.strip();
+		if ( this.completed ) { return; }
 
-		_.each(this.answers, _.bind(function(answer) {
+		_.delay(_.bind(function() {
 
-			var valid = code.indexOf(this.property + answer);
-			if ( valid > -1 ) { 
-				this.complete = true; 
-				this.completed();
+			if ( this.complete.length === this.length ) { 
+				this.done(); 
+				return; 
 			}
 
-		}, this));
+			var code = this.strip();
+
+			_.each(this.answers, _.bind(function(answer) {
+
+				var valid = code.indexOf(this.property + answer);
+				var dup = this.complete.indexOf(answer);
+
+				if ( valid > -1 && dup === -1) {
+					
+					this.complete.push(answer);
+
+				}
+
+			}, this));
+
+		}, this), 100);
 	},
 	strip: function() {
 		return this.$el.text().replace(/\d/g, '').replace(' ', '');
 	},
-	completed: function() {
+	done: function() {
+		this.completed = true;
 		appRouter.hv.$el.find('li.active').addClass('valid');
 	},
 	destroy: function() {
