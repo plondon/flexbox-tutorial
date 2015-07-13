@@ -14,6 +14,8 @@ var HeaderView = Backbone.View.extend({
 
 		this.toggleNav();
 		this.render();
+
+		this.bindEvents();
 	},
 	render: function() {
 		this.$lessons.removeClass('active');
@@ -30,6 +32,17 @@ var HeaderView = Backbone.View.extend({
 			this.open = true;
 			this.$el.addClass('active');
 		}
+	},
+	closeNav: function() {
+		if ( this.open ) {
+			this.toggleNav();	
+		}
+	},
+	escape: function(e) {
+		if ( e.keyCode === 27 ) { this.closeNav(); }
+	},
+	bindEvents: function() {
+		$(document).on('keyup', _.bind(this.escape, this));
 	},
 	destroy: function() {
 		this.$lessons.removeClass('active');
