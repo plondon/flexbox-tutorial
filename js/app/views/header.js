@@ -41,8 +41,16 @@ var HeaderView = Backbone.View.extend({
 	escape: function(e) {
 		if ( e.keyCode === 27 ) { this.closeNav(); }
 	},
+	clickOut: function(e) {
+		var $this = $(e.target);
+		
+		if ( !$this.closest('#header')[0] ) {
+			this.closeNav();
+		}
+	},
 	bindEvents: function() {
 		$(document).on('keyup', _.bind(this.escape, this));
+		$(document).on('click', _.bind(this.clickOut, this));
 	},
 	destroy: function() {
 		this.$lessons.removeClass('active');
