@@ -42,10 +42,17 @@
 <style>
 .parent {
   display: flex;
+  height: 300px;
+  border-bottom: 1px solid black;
 }
 .child {
+	flex: 1;
   display: block;
   margin-bottom: 10px;
+}
+.child:first-child {
+	height: 50px;
+	line-height: 50px;
 }
 </style>
 <!doctype html>
@@ -69,10 +76,17 @@
 <textarea id="css-code" name="code">
 .parent {
   display: flex;
+  height: 300px;
+  border-bottom: 1px solid black;
 }
 .child {
+	flex: 1;
   display: block;
   margin-bottom: 10px;
+}
+.child:first-child {
+	height: 50px;
+	line-height: 50px;
 }
 </textarea>
 		</div>
