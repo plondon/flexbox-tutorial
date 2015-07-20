@@ -74,6 +74,18 @@ var LessonView = Backbone.View.extend({
 																	 				   'center;']
 															  });
 				break;
+			case '5':
+				this.cv = new CodeReView({ el: $el,
+																	 parent: this,
+																	 property: 'align-items',
+																	 answers: ['flex-start;',
+																	           'flex-end;',
+																	           'baseline;',
+																	           'stretch;',
+																	           'center;']
+
+																	});
+				break;
 			default:
 				// default
 		}

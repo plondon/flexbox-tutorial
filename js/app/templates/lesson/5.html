@@ -3,30 +3,34 @@
 
 	<div class="intro">
 		<p>
-			Another parent property, <code>align-items</code> defines how the parent's children will be aligned relative to the cross-axis of the flexbox. <code>align-items</code> can be set to a few attributes we've already seen like <b>flex-start | flex-end</b> and a few new ones <b>center | stretch | baseline</b>.
+			Another parent property, <code>align-items</code> defines how the parent's children will be aligned relative to the cross-axis of the flexbox. <code>align-items</code> can be set to a few attributes we've already seen like <b>flex-start | flex-end | center</b> and a few new ones like <b>stretch | baseline</b>. Mozilla summarizes it below: 
 		</p>
 
 		<blockquote>
-
+			The CSS align-items property aligns flex items of the current flex line the same way as justify-content but in the perpendicular direction.
 		</blockquote>
-		<cite><a target="_blank" href=""></a></cite>
+		<cite><a target="_blank" href="">MOZ</a></cite>
 
 		<div class="tldr">
 			<span class="underline">tl;dr</span>
 			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
+				<li>the opposite of <code>justify-content</code></li>
+				<li>the default attribute is stretch</li>
 			</ul>
 		</div>
 
 		<div class="instructions">
 			<span class="underline">instructions</span>
-			<p></p>
+			<p>Because we set the height and line-height of the <code>.child</code> elements our style.css file, you'll need to overide the <b>height</b> and <b>line-height</b> properties to see the full effects of <code>align-items: stretch;</code>.</p>
 			<pre>
-<code>
-<!-- CODE INSTRUCTIONS -->
-</code>
+<code>.parent {
+  align-items: flex-start | flex-end | center | stretch | baseline;
+}
+
+.child {
+  height: auto !important;
+  line-height: auto !important;
+}</code>
 			</ol>
 		</div>
 		<!-- 
