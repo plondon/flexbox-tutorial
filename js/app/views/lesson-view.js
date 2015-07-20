@@ -83,8 +83,14 @@ var LessonView = Backbone.View.extend({
 																	           'baseline;',
 																	           'stretch;',
 																	           'center;']
-
-																	});
+																});
+				break;
+			case '6':
+				this.cv = new CodeReView({ el: $el,
+																	 parent: this,
+																	 property: 'order',
+																	 answers: ['1;', '2;']
+																});
 				break;
 			default:
 				// default

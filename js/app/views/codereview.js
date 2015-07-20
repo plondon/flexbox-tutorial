@@ -26,7 +26,7 @@ var CodeReView = Backbone.View.extend({
 				return; 
 			}
 
-			var code = this.strip();
+			var code = this.$el.text();
 
 			_.each(this.answers, _.bind(function(answer) {
 
@@ -42,9 +42,6 @@ var CodeReView = Backbone.View.extend({
 			}, this));
 
 		}, this), 100);
-	},
-	strip: function() {
-		return this.$el.text().replace(/\d/g, '').replace(' ', '');
 	},
 	done: function() {
 		this.completed = true;
