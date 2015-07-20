@@ -9,25 +9,20 @@
 		<div class="tldr">
 			<span class="underline">tl;dr</span>
 			<ul>
-				<li>child property</li>
+				<li>a child property</li>
 				<li>multiple children can have the same order</li>
-				<li></li>
+				<li>to use or not use with nth-child (?)</li>
 			</ul>
 		</div>
 
 		<div class="instructions">
 			<span class="underline">instructions</span>
-			<p></p>
-			<pre>
-<code>
-<!-- CODE INSTRUCTIONS -->
-</code>
-			</ol>
+			<p>Set the correct order of the .child blocks</p>
+			
 		</div>
-		<!-- 
-		NOTE IF NECESSARY
-		<p class="note"></p>
-		 -->
+		
+		<p class="note">blue blocks are class <b>.blue</b>, orange blocks are class <b>.orange</b> </p>
+		
 	</div>
 
 	<div class="toggle">
@@ -40,7 +35,14 @@
 		<div class="html">
 			<textarea id="html-code" name="code">
 <style>
-/* HTML CSS */
+.parent {
+	display: flex;
+}
+
+.child {
+	flex: 1;
+  order: 3;
+}
 </style>
 <!doctype html>
 <html>
@@ -53,10 +55,8 @@
     	<div class="child orange">2</div>
     	<div class="child red">3</div>
     	<div class="child green">4</div>
-    	<div class="child blue">5</div>
-    	<div class="child orange">6</div>
-    	<div class="child red">7</div>
-    	<div class="child green">8</div>
+    	<div class="child blue">1</div>
+    	<div class="child orange">2</div>
   	</div>
   </body>
 </html>
@@ -65,7 +65,14 @@
 
 		<div class="css">
 <textarea id="css-code" name="code">
-<!-- CSS CODE (mirrors html code) -->
+.parent {
+	display: flex;
+}
+
+.child {
+	flex: 1;
+  order: 3;
+}
 </textarea>
 		</div>
 
