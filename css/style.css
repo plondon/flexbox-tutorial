@@ -1231,22 +1231,46 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   transition: top 0.2s 0.4s, opacity 0.2s 0.4s;
 }
 
-#header ol li:nth-child(2) {
+#header ol li:nth-child(6) {
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
 
-#header ol li:nth-child(1) {
+#header ol li:nth-child(5) {
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
 
-#header ol li:nth-child(0) {
+#header ol li:nth-child(4) {
   -webkit-transition-delay: 0.3s;
   -moz-transition-delay: 0.3s;
   transition-delay: 0.3s;
+}
+
+#header ol li:nth-child(3) {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+#header ol li:nth-child(2) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+#header ol li:nth-child(1) {
+  -webkit-transition-delay: 0.6s;
+  -moz-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+
+#header ol li:nth-child(0) {
+  -webkit-transition-delay: 0.7s;
+  -moz-transition-delay: 0.7s;
+  transition-delay: 0.7s;
 }
 
 #header ol li a {
@@ -1320,6 +1344,30 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   -webkit-transition-delay: 0.3s;
   -moz-transition-delay: 0.3s;
   transition-delay: 0.3s;
+}
+
+#header.active ol li:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+#header.active ol li:nth-child(5) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+#header.active ol li:nth-child(6) {
+  -webkit-transition-delay: 0.6s;
+  -moz-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+
+#header.active ol li:nth-child(7) {
+  -webkit-transition-delay: 0.7s;
+  -moz-transition-delay: 0.7s;
+  transition-delay: 0.7s;
 }
 
 #theme-toggle {
