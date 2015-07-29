@@ -1268,7 +1268,7 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 }
 
 #header ol li:hover:before, #header ol li.active:before {
-  background-color: rgba(0, 133, 195, 0.5);
+  background-color: #0085c3;
 }
 
 #header ol li.valid:before, #header ol li.valid:hover:before {
