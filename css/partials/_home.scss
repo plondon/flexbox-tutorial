@@ -11,25 +11,29 @@
 		opacity: 0;
 		top: -20px;
 	}
+	.muscles {
+		font-size: 120px;
+		margin-bottom: -20px;
+		&:hover {
+			font-style: italic;
+		}
+		a {
+			color: white;
+		}
+		.right {
+			display: inline-block;
+			-moz-transform: scaleX(-1);    /* Gecko */
+			-o-transform: scaleX(-1);      /* Operah */
+			-webkit-transform: scaleX(-1); /* webkit */
+			transform: scaleX(-1); 
+		}
+	}
 }
 
 #content.active {
 	.muscles, h1, a {
 		top: 0px;
 		opacity: 1;
-	}
-	.muscles {
-		font-size: 120px;
-		&:hover {
-			font-style: italic;
-		}
-		.right {
-			display: inline-block;
-			-moz-transform: scaleX(-1);    /* Gecko */
-			 -o-transform: scaleX(-1);      /* Operah */
-			 -webkit-transform: scaleX(-1); /* webkit */
-			 transform: scaleX(-1); 
-		}
 	}
 	.wrapper.home {
 		> * {

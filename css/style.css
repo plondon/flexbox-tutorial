@@ -1493,20 +1493,20 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   transition-delay: 0.3s;
 }
 
-#content.active .muscles, #content.active h1, #content.active a {
-  top: 0px;
-  opacity: 1;
-}
-
-#content.active .muscles {
+.wrapper.home .muscles {
   font-size: 120px;
+  margin-bottom: -20px;
 }
 
-#content.active .muscles:hover {
+.wrapper.home .muscles:hover {
   font-style: italic;
 }
 
-#content.active .muscles .right {
+.wrapper.home .muscles a {
+  color: white;
+}
+
+.wrapper.home .muscles .right {
   display: inline-block;
   -moz-transform: scaleX(-1);
   /* Gecko */
@@ -1515,6 +1515,11 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   -webkit-transform: scaleX(-1);
   /* webkit */
   transform: scaleX(-1);
+}
+
+#content.active .muscles, #content.active h1, #content.active a {
+  top: 0px;
+  opacity: 1;
 }
 
 #content.active .wrapper.home > *:nth-child(1) {
