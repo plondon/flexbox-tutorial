@@ -1498,6 +1498,25 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   opacity: 1;
 }
 
+#content.active .muscles {
+  font-size: 120px;
+}
+
+#content.active .muscles:hover {
+  font-style: italic;
+}
+
+#content.active .muscles .right {
+  display: inline-block;
+  -moz-transform: scaleX(-1);
+  /* Gecko */
+  -o-transform: scaleX(-1);
+  /* Operah */
+  -webkit-transform: scaleX(-1);
+  /* webkit */
+  transform: scaleX(-1);
+}
+
 #content.active .wrapper.home > *:nth-child(1) {
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
