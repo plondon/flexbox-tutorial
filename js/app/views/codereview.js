@@ -17,7 +17,7 @@ var CodeReView = Backbone.View.extend({
 		this.bindEvents();
 	},
 	isValid: function() {
-		if ( this.completed ) { return; }
+		if ( this.completed || this.lessonCompleted() ) { return; }
 
 		_.delay(_.bind(function() {
 
@@ -46,6 +46,9 @@ var CodeReView = Backbone.View.extend({
 	done: function() {
 		this.completed = true;
 		appRouter.hv.$el.find('li.active').addClass('valid');
+	},
+	lessonCompleted: function() {
+		return appRouter.hv.$el.find('li.active').hasClass('valid');
 	},
 	destroy: function() {
 		this.remove();

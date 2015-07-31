@@ -902,7 +902,7 @@ a:hover {
 }
 
 #content .wrapper > div.intro {
-  font-size: 14px;
+  font-size: 16px;
   max-width: 1100px;
   margin-bottom: 20px;
   display: -webkit-box;
@@ -963,11 +963,12 @@ a:hover {
   border-left: 10px solid #c7254e;
   background: #f9f2f4;
   padding: 10px 20px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 #content .wrapper > div.intro .instructions pre {
   margin: 0px;
+  font-size: 14px;
   padding: 10px 20px;
   white-space: normal;
   background: #fff7e5;
@@ -1053,6 +1054,10 @@ a:hover {
     margin-top: 0;
     margin-left: calc(-50% + 5px);
   }
+}
+
+#content span.underline {
+  font-size: 20px;
 }
 
 .toggle {
@@ -1504,6 +1509,10 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 
 .wrapper.home .muscles a {
   color: white;
+}
+
+.wrapper.home .muscles .muscle {
+  background-image: url(http://d2trtkcohkrm90.cloudfront.net/applimg221-5@2x.png) no-repeat;
 }
 
 .wrapper.home .muscles .right {
