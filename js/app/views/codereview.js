@@ -14,6 +14,8 @@ var CodeReView = Backbone.View.extend({
 		this.property = opts.property + ': ';
 		this.complete = [];
 
+		this.$active = appRouter.hv.$el.find('li.active');
+
 		this.bindEvents();
 	},
 	isValid: function() {
@@ -45,10 +47,19 @@ var CodeReView = Backbone.View.extend({
 	},
 	done: function() {
 		this.completed = true;
-		appRouter.hv.$el.find('li.active').addClass('valid');
+		this.$active.addClass('valid');
+
+		this.alertSuccess();
+	},
+	alertSuccess: function() {
+		// only render once
+		if ( this.$active.hasClass('finished') ) { return; }
+
+		alert('finished');
+		this.$active.addClass('finished');
 	},
 	lessonCompleted: function() {
-		return appRouter.hv.$el.find('li.active').hasClass('valid');
+		return this.$active.hasClass('valid');
 	},
 	destroy: function() {
 		this.remove();
