@@ -55,8 +55,20 @@ var CodeReView = Backbone.View.extend({
 		// only render once
 		if ( this.$active.hasClass('finished') ) { return; }
 
-		alert('finished');
-		this.$active.addClass('finished');
+		// wait for codemirror code to render
+		_.delay(_.bind(function() {
+			
+			this.$active.addClass('finished');
+			
+			$('body').addClass('finished');
+			
+			_.delay(function() {
+
+				$('body').removeClass('finished');
+
+			}, window.wait);
+
+		}, this), window.wait);
 	},
 	lessonCompleted: function() {
 		return this.$active.hasClass('valid');

@@ -7,9 +7,29 @@ html {
 }
 
 body {
+	position: relative;
 	font-family: $sans;
 	font-weight: 400;
 	margin: 0;
+	&:before {
+		@include transition(margin-top 0s $vslow, opacity $vslow);
+		@include transform(translate3d(-50%, -50%, 0));
+		content: 'Finished!';
+		margin-top: 40px;
+		position: fixed;
+		color: $green;
+		z-index: 100;
+		opacity: 0;
+		left: 50%;
+		top: 50%;
+	}
+	&.finished {
+		&:before {
+			opacity: 1;
+			margin-top: -40px;
+			@include transition(margin-top $vslow, opacity $vslow);
+		}
+	}
 }
 
 .wrapper {
