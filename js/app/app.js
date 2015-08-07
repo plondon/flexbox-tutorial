@@ -54,7 +54,7 @@ var AppRouter = Backbone.Router.extend({
 
 $(document).ready(function() {
 	window.$ = jQuery;
-	window.max = 6;
+	window.max = 7;
 	window.wait = 750;
 
 	// use $.cookie to set
