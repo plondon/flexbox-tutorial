@@ -14,8 +14,10 @@ body {
 	&:before {
 		@include transition(margin-top 0s $vslow, opacity $vslow);
 		@include transform(translate3d(-50%, -50%, 0));
-		content: 'Finished!';
+		font-family: 'FontAwesome';
+		content: '\f058';
 		margin-top: 40px;
+		font-size: 72px;
 		position: fixed;
 		color: $green;
 		z-index: 100;
@@ -27,7 +29,7 @@ body {
 		&:before {
 			opacity: 1;
 			margin-top: -40px;
-			@include transition(margin-top $vslow, opacity $vslow);
+			@include transition(margin-top $vslow, opacity $slow);
 		}
 	}
 }

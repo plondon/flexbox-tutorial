@@ -720,8 +720,10 @@ body:before {
   -ms-transform: translate3d(-50%, -50%, 0);
   -o-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
-  content: 'Finished!';
+  font-family: 'FontAwesome';
+  content: '\f058';
   margin-top: 40px;
+  font-size: 72px;
   position: fixed;
   color: #51c96d;
   z-index: 100;
@@ -733,9 +735,9 @@ body:before {
 body.finished:before {
   opacity: 1;
   margin-top: -40px;
-  -webkit-transition: margin-top 0.75s, opacity 0.75s;
-  -moz-transition: margin-top 0.75s, opacity 0.75s;
-  transition: margin-top 0.75s, opacity 0.75s;
+  -webkit-transition: margin-top 0.75s, opacity 0.4s;
+  -moz-transition: margin-top 0.75s, opacity 0.4s;
+  transition: margin-top 0.75s, opacity 0.4s;
 }
 
 .wrapper {
