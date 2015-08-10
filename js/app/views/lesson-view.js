@@ -89,15 +89,32 @@ var LessonView = Backbone.View.extend({
 				this.cv = new CodeReView({ el: $el,
 																	 parent: this,
 																	 property: 'order',
-																	 answers: ['1;', '2;']
+																	 answers: ['1;', 
+																	           '2;']
 																});
 				break;
 			case '7':
 				this.cv = new CodeReView({ el: $el,
 																	 parent: this,
 																	 property: 'flex-grow',
-																	 answers: ['1;', '2;']
+																	 answers: ['1;',
+																	           '2;']
 																});
+				break;
+			case '8':
+				this.cv = new CodeReView({ el: $el,
+																	 parent: this,
+																	 property: 'flex-shrink',
+																	 answers: ['1;',
+																	 					 '2;',
+																	 					 '3;',
+																	 					 '4;',
+																	 					 '5;',
+																	 					 '6;',
+																	 					 '7;',
+																	 					 '8;']
+																})
+
 				break;
 			default:
 				// default

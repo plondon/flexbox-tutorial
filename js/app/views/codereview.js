@@ -68,7 +68,7 @@ var CodeReView = Backbone.View.extend({
 
 			}, window.wait);
 
-		}, this), window.wait);
+		}, this), 100);
 	},
 	lessonCompleted: function() {
 		return this.$active.hasClass('valid');

@@ -1,0 +1,94 @@
+<div class="wrapper lesson">
+	<h1 class="underline">Lesson #8: flex-shrink</h1>
+
+	<div class="intro">
+		<p>
+			2 out of 3 factors for the main property <code>flex</code>. Most resources I found for this property weren't very useful. It took awhile to figure out how flex-shrink works and when you'd want to use it. Basically if the container is too big for the content, you can tell an element to shrink. Kinda backwards, kinda trippy. Let's play with it.
+		</p>
+
+		<blockquote>
+			...specifies the "flex shrink factor", which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there isn't enough space on the row.
+		</blockquote>
+		<cite><a target="_blank" href="https://css-tricks.com/almanac/properties/f/flex-shrink/">CSS-Tricks</a></cite>
+
+		<div class="tldr">
+			<span class="underline">tl;dr</span>
+			<ul>
+				<li>when the items are too large for the container</li>
+				<li>default value is 1</li>
+			</ul>
+		</div>
+
+		<div class="instructions">
+			<span class="underline">instructions</span>
+			<p>Currently the parent element has a max-width of 400px, but its children elements would all like to be 100px. Because there are 8 children <code>display: flex;</code> sets them all to an equal width: 400/8 = 50, so that's what they are. Change all the children's flex-shrink property to be equal to their nth-child. You'll get a nice cascading effect. Like...</p>
+			<pre>
+<code>.child:nth-child(1) {
+  flex-shrink: 1;
+}
+.child:nth-child(2) {
+  flex-shrink: 2;
+}
+...</code>
+		</pre>
+		</div>
+	</div>
+
+	<div class="toggle">
+		<button id="html-toggle">HTML</button>
+		<button id="css-toggle">CSS</button>
+	</div>
+
+	<div class="code">
+
+		<div class="html">
+			<textarea id="html-code" name="code">
+<style>
+.parent {
+  display: flex;
+  max-width: 400px;
+}
+.child {
+  width: 100px;
+  flex-shrink: 1;
+}
+</style>
+<!doctype html>
+<html>
+	<head>
+	<link rel="stylesheet" href="../css/style.css">
+	</head>
+  <body>
+  	<div class="parent">
+    	<div class="child blue">1</div>
+    	<div class="child orange">2</div>
+    	<div class="child red">3</div>
+    	<div class="child green">4</div>
+    	<div class="child blue">5</div>
+    	<div class="child orange">6</div>
+    	<div class="child red">7</div>
+    	<div class="child green">8</div>
+  	</div>
+  </body>
+</html>
+</textarea>
+		</div>
+
+		<div class="css">
+<textarea id="css-code" name="code">
+.parent {
+  display: flex;
+  max-width: 400px;
+}
+.child {
+  width: 100px;
+  flex-shrink: 1;
+}
+</textarea>
+		</div>
+
+		<iframe id="preview" class="output">
+			
+		</iframe>
+	</div>
+</div>
