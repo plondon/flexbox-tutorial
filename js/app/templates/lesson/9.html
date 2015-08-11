@@ -3,13 +3,13 @@
 
 	<div class="intro">
 		<p>
-			The last sub-property for <code>flex: ...</code>, flex-basis specifies the initial size of the flex-item before anything gets applied to it. 
+			The last sub-property for <code>flex: ...</code>, flex-basis specifies the initial size of the flex-item before anything gets applied to it. Read this excerpt from this helpful SO answer, then read the whole answer...
 		</p>
 
 		<blockquote>
-
+		flex-basis allows you to specify the initial/starting size of the element, before anything else is computed. It can either be a percentage or an absolute value.
 		</blockquote>
-		<cite><a target="_blank" href=""></a></cite>
+		<cite><a target="_blank" href="http://stackoverflow.com/questions/23569229/what-exactly-flex-basis-property-sets">Stack Overflow</a></cite>
 
 		<div class="tldr">
 			<span class="underline">tl;dr</span>
@@ -23,7 +23,7 @@
 		<div class="instructions">
 			<span class="underline">instructions</span>
 			<p></p>
-			<pre>
+		<pre>
 <code>
 <!-- CODE INSTRUCTIONS -->
 </code>
@@ -45,7 +45,12 @@
 		<div class="html">
 			<textarea id="html-code" name="code">
 <style>
-/* HTML CSS */
+.parent {
+  display: flex;
+}
+.child {
+  flex-grow: 0;
+}
 </style>
 <!doctype html>
 <html>
@@ -70,7 +75,13 @@
 
 		<div class="css">
 <textarea id="css-code" name="code">
-<!-- CSS CODE (mirrors html code) -->
+.parent {
+  display: flex;
+}
+.child {
+  flex-grow: 0;
+  flex-basis: 20px;
+}
 </textarea>
 		</div>
 
