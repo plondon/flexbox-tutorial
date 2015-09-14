@@ -15,6 +15,7 @@ var LessonView = Backbone.View.extend({
 
 		var self = this;
 		// require lesson template
+		debugger;
 		require(['text!templates/lesson/' + this.lesson + '.html'
 			      ], function (lessonTemplate) {
 
