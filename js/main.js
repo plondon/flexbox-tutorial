@@ -1,5 +1,5 @@
 require.config({
-	baseUrl: "/js/app",
+	baseUrl: "js/app",
 	paths: {
 		"jquery": "../lib/jquery.min",
 		"underscore": "../lib/underscore.min",
