@@ -1590,6 +1590,12 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 #content.active a {
   z-index: 10;
   position: relative;
+  -webkit-transition-delay: 0;
+  -moz-transition-delay: 0;
+  transition-delay: 0;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 #content.active .wrapper.home > *:nth-child(1) {

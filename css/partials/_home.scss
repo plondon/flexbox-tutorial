@@ -41,6 +41,8 @@
 	a {
 		z-index: 10;
 		position: relative;
+		@include transition-delay(0);
+		@include transition(color $fast);
 	}
 	.wrapper.home {
 		> * {
