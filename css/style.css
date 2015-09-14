@@ -1587,6 +1587,11 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   opacity: 1;
 }
 
+#content.active a {
+  z-index: 10;
+  position: relative;
+}
+
 #content.active .wrapper.home > *:nth-child(1) {
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
