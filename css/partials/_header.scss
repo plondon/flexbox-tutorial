@@ -83,6 +83,8 @@
 }
 
 #theme-toggle {
+	/* ADD THIS FEATURE LATER */
+	display: none;
 	margin-top: 25px;
 	@include display(flex);
 	@include justify-content(flex-end);

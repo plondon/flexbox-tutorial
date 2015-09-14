@@ -1430,6 +1430,8 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 }
 
 #theme-toggle {
+  /* ADD THIS FEATURE LATER */
+  display: none;
   margin-top: 25px;
   display: -webkit-box;
   display: -moz-box;
