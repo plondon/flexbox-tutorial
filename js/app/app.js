@@ -29,6 +29,8 @@ var AppRouter = Backbone.Router.extend({
 
 		setTimeout(_.bind(function() {
 			window.appView.render($template);
+
+			debugger;
 		}, this), wait);
 
 		this.init = true;

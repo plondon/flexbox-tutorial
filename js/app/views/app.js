@@ -22,6 +22,8 @@ var AppView = Backbone.View.extend({
 	render: function($temp) {
 		this.$content.html($temp);
 
+		debugger;
+
 		this.$content.imagesLoaded(_.bind(function() {
 			_.delay(_.bind(function() {
 
