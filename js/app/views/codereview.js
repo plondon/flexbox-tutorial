@@ -12,10 +12,13 @@ var CodeReView = Backbone.View.extend({
 		this.length = opts.answers.length;
 		this.answers = opts.answers;
 		this.property = opts.property + ': ';
+
 		this.complete = [];
+		this.completedLessons = Cookies.get('completedLessons') ? Cookies.get('completedLessons') : '';
 
 		this.$active = appRouter.hv.$el.find('li.active');
 
+		this.setValid();
 		this.bindEvents();
 	},
 	isValid: function() {
@@ -49,6 +52,9 @@ var CodeReView = Backbone.View.extend({
 		this.completed = true;
 		this.$active.addClass('valid');
 
+		this.completedLessons += ' ' + this.$active.index();
+		Cookies.set('completedLessons', this.completedLessons);
+
 		this.alertSuccess();
 	},
 	alertSuccess: function() {
@@ -72,6 +78,18 @@ var CodeReView = Backbone.View.extend({
 	},
 	lessonCompleted: function() {
 		return this.$active.hasClass('valid');
+	},
+	setValid: function() {
+		if ( this.completedLessons.length ) {
+			var ary = this.completedLessons.split(' ');
+			var l = ary.length;
+			ary = ary.slice(1, l);
+
+			ary.forEach(function(i) {
+				var valid = appRouter.hv.$el.find('li')[i];
+				$(valid).addClass('valid');
+			});
+		}
 	},
 	destroy: function() {
 		this.remove();

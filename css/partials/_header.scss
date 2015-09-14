@@ -21,20 +21,20 @@
 		@include transition(margin-left $fast $fast, margin-top $fast);
 	}
 	div.home {
-		@include transition(margin-top $fast, opacity $fast);
+		@include transition(margin-top $fast $slow, opacity $fast $slow);
 		margin-left: -65px;
 		margin-top: 20px;
 		opacity: 0;
 	}
 	ol {
 		li {
-			top: 10px;
+			left: -10px;
 			opacity: 0;
 			font-size: 12px;
 			margin-bottom: 5px;
 			position: relative;
-			@include reverse-delay(1, 7, 10);
-			@include transition(top $fast $slow, opacity $fast $slow);
+			@include reverse-delay(1, 9, 10);
+			@include transition(left 0.1s, opacity 0.1s);
 			a {
 				text-decoration: none;
 				&:hover {
@@ -75,9 +75,9 @@
 			@include transition(margin-top $fast $slow, opacity $fast $slow);
 		}
 		ol li {
-			top: 0px;
+			left: 0px;
 			opacity: 1;
-			@include delay(1, 7, 10);
+			@include delay(1, 9, 10);
 		}
 	}
 }

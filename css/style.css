@@ -1247,65 +1247,77 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 }
 
 #header div.home {
-  -webkit-transition: margin-top 0.2s, opacity 0.2s;
-  -moz-transition: margin-top 0.2s, opacity 0.2s;
-  transition: margin-top 0.2s, opacity 0.2s;
+  -webkit-transition: margin-top 0.2s 0.4s, opacity 0.2s 0.4s;
+  -moz-transition: margin-top 0.2s 0.4s, opacity 0.2s 0.4s;
+  transition: margin-top 0.2s 0.4s, opacity 0.2s 0.4s;
   margin-left: -65px;
   margin-top: 20px;
   opacity: 0;
 }
 
 #header ol li {
-  top: 10px;
+  left: -10px;
   opacity: 0;
   font-size: 12px;
   margin-bottom: 5px;
   position: relative;
-  -webkit-transition: top 0.2s 0.4s, opacity 0.2s 0.4s;
-  -moz-transition: top 0.2s 0.4s, opacity 0.2s 0.4s;
-  transition: top 0.2s 0.4s, opacity 0.2s 0.4s;
+  -webkit-transition: left 0.1s, opacity 0.1s;
+  -moz-transition: left 0.1s, opacity 0.1s;
+  transition: left 0.1s, opacity 0.1s;
 }
 
-#header ol li:nth-child(6) {
+#header ol li:nth-child(8) {
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
 
-#header ol li:nth-child(5) {
+#header ol li:nth-child(7) {
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
 
-#header ol li:nth-child(4) {
+#header ol li:nth-child(6) {
   -webkit-transition-delay: 0.3s;
   -moz-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
 
-#header ol li:nth-child(3) {
+#header ol li:nth-child(5) {
   -webkit-transition-delay: 0.4s;
   -moz-transition-delay: 0.4s;
   transition-delay: 0.4s;
 }
 
-#header ol li:nth-child(2) {
+#header ol li:nth-child(4) {
   -webkit-transition-delay: 0.5s;
   -moz-transition-delay: 0.5s;
   transition-delay: 0.5s;
 }
 
-#header ol li:nth-child(1) {
+#header ol li:nth-child(3) {
   -webkit-transition-delay: 0.6s;
   -moz-transition-delay: 0.6s;
   transition-delay: 0.6s;
 }
 
-#header ol li:nth-child(0) {
+#header ol li:nth-child(2) {
   -webkit-transition-delay: 0.7s;
   -moz-transition-delay: 0.7s;
   transition-delay: 0.7s;
+}
+
+#header ol li:nth-child(1) {
+  -webkit-transition-delay: 0.8s;
+  -moz-transition-delay: 0.8s;
+  transition-delay: 0.8s;
+}
+
+#header ol li:nth-child(0) {
+  -webkit-transition-delay: 0.9s;
+  -moz-transition-delay: 0.9s;
+  transition-delay: 0.9s;
 }
 
 #header ol li a {
@@ -1359,7 +1371,7 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 }
 
 #header.active ol li {
-  top: 0px;
+  left: 0px;
   opacity: 1;
 }
 
@@ -1403,6 +1415,18 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   -webkit-transition-delay: 0.7s;
   -moz-transition-delay: 0.7s;
   transition-delay: 0.7s;
+}
+
+#header.active ol li:nth-child(8) {
+  -webkit-transition-delay: 0.8s;
+  -moz-transition-delay: 0.8s;
+  transition-delay: 0.8s;
+}
+
+#header.active ol li:nth-child(9) {
+  -webkit-transition-delay: 0.9s;
+  -moz-transition-delay: 0.9s;
+  transition-delay: 0.9s;
 }
 
 #theme-toggle {
