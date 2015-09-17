@@ -113,9 +113,15 @@ var LessonView = Backbone.View.extend({
 																	 					 '6;',
 																	 					 '7;',
 																	 					 '8;']
-																})
+																});
 
 				break;
+			case '9':
+				this.cv = new CodeReView({ el: $el,
+																	 parent: this,
+																	 property: 'flex-grow',
+																	 answers: ['2;']
+																});
 			default:
 				// default
 		}
