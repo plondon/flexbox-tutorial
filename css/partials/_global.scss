@@ -55,6 +55,23 @@ button {
 	border: 0px;
 }
 
+.button {
+	color: $white;
+	font-size: 12px;
+	padding: 10px 30px;
+  border-radius: 3px;
+  text-decoration: none;
+	text-transform: uppercase;
+	background: rgba(33,37,43,1);
+  box-shadow: inset 0 0px 0 0px black;
+  @include transition(box-shadow $slow);
+  position: relative;
+  &:hover {
+    color: $white;
+    box-shadow: inset 0 -37px 0 0px black;
+  }
+}
+
 .child {
 	color: white;
 	height: 100px;
@@ -64,7 +81,7 @@ button {
 }
 
 .blue {
-	background-color: $blue;	
+	background-color: $blue;
 }
 .orange {
 	background-color: $orange;

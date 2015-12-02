@@ -1,11 +1,11 @@
 <div class="wrapper">
 	<% var page = parseInt(page) %>
 	<% if (page != 1 && page < window.max) { %>
-		<a href="/lesson/<%= page - 1 %>" class="prev">Lesson <%= page - 1 %></a>
-		<a href="/lesson/<%= page + 1 %>" class="next">Lesson <%= page + 1 %></a>
+		<a href="/lesson/<%= page - 1 %>" class="prev button">Lesson <%= page - 1 %></a>
+		<a href="/lesson/<%= page + 1 %>" class="next button">Lesson <%= page + 1 %></a>
 	<% } else if ( page == 1 ) { %>
-		<a href="/lesson/<%= page + 1 %>" class="next">Lesson <%= page + 1 %></a>
+		<a href="/lesson/<%= page + 1 %>" class="next button">Lesson <%= page + 1 %></a>
 	<% } else { %>
-		<a href="/lesson/<%= page - 1 %>" class="prev">Lesson <%= page - 1 %></a>
+		<a href="/lesson/<%= page - 1 %>" class="prev button">Lesson <%= page - 1 %></a>
 	<% } %>
 </div>

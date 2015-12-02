@@ -761,6 +761,26 @@ button {
   border: 0px;
 }
 
+.button {
+  color: #f1f4f9;
+  font-size: 12px;
+  padding: 10px 30px;
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #21252b;
+  box-shadow: inset 0 0px 0 0px black;
+  -webkit-transition: box-shadow 0.4s;
+  -moz-transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s;
+  position: relative;
+}
+
+.button:hover {
+  color: #f1f4f9;
+  box-shadow: inset 0 -37px 0 0px black;
+}
+
 .child {
   color: white;
   height: 100px;
@@ -1223,9 +1243,9 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   padding-left: 5px;
   padding-right: 150px;
   border-right: 2px solid #efefef;
-  -webkit-transition: -webkit-transform 0.2s;
-  -moz-transition: -moz-transform 0.2s;
-  transition: transform 0.2s;
+  -webkit-transition: -webkit-transform;
+  -moz-transition: -moz-transform;
+  transition: transform;
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
@@ -1431,7 +1451,7 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 
 #theme-toggle {
   /* ADD THIS FEATURE LATER */
-  display: none;
+  display: none !important;
   margin-top: 25px;
   display: -webkit-box;
   display: -moz-box;
@@ -1476,27 +1496,16 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 #footer .wrapper {
   padding: 15px 5px;
   padding-bottom: 30px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 #footer .wrapper > a {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  margin-bottom: 20px;
+  display: block;
+  float: left;
 }
 
 #footer .wrapper > a.next {
-  text-align: right;
+  float: right;
 }
 
 .wrapper.home {
@@ -1593,9 +1602,9 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
   -webkit-transition-delay: 0;
   -moz-transition-delay: 0;
   transition-delay: 0;
-  -webkit-transition: color 0.2s;
-  -moz-transition: color 0.2s;
-  transition: color 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 #content.active .wrapper.home > *:nth-child(1) {

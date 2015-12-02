@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 
 		shell: {
 			server: {
-				command: 'killall php; php -S' + ip + ':3000',
+				command: 'killall node; node server.js',
 				options: {
 					async: true
 				}

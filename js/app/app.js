@@ -16,7 +16,7 @@ var AppRouter = Backbone.Router.extend({
 		this.init = false;
 	},
 	routes: {
-		"": "home",
+		"": "render",
 		"lesson/:number": "render",
 	},
 	home: function() {
@@ -35,6 +35,7 @@ var AppRouter = Backbone.Router.extend({
 	},
 	render: function(number) {
 		this.reset();
+    if (!number) { number = 1; }
 		window.appView.changePage();
 		var wait = this.init ? window.wait : 0;
 		this.hv = new HeaderView({ el: $('#header'), page: number });

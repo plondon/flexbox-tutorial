@@ -28,7 +28,7 @@
 			-moz-transform: scaleX(-1);    /* Gecko */
 			-o-transform: scaleX(-1);      /* Operah */
 			-webkit-transform: scaleX(-1); /* webkit */
-			transform: scaleX(-1); 
+			transform: scaleX(-1);
 		}
 	}
 }
@@ -42,7 +42,7 @@
 		z-index: 10;
 		position: relative;
 		@include transition-delay(0);
-		@include transition(color $fast);
+		@include transition(all $fast);
 	}
 	.wrapper.home {
 		> * {
